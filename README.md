@@ -1,10 +1,73 @@
 # Arbora
 
-**Ton arbre généalogique, chez toi.** Un outil de généalogie complet qui tient dans un seul fichier HTML : il s’ouvre dans n’importe quel navigateur, fonctionne hors ligne, sans compte et sans serveur.
+**English** · [Français](#français)
 
-*Your family tree, at home. A complete genealogy tool in a single HTML file: it opens in any browser, works offline, with no account and no server. [English below](#english)*
+**Your family tree, at home.** Arbora is a complete genealogy tool in a single HTML file. It opens in any browser and works offline, with no account and no server.
 
-![Arbora, vue de l’arbre](docs/arbre-light.png)
+![Arbora, tree view](docs/arbre-light.png)
+
+## Download
+
+1. Go to **[Releases](https://github.com/florentdoug/arbora/releases/latest)** and download the `arbora-x.y.z.html` file.
+2. Double-click it to open it in your browser (Chrome, Edge, Firefox, Safari).
+3. Start with yourself, import a GEDCOM file (MyHeritage, Geneanet…) or start with an AI.
+
+To be notified of new versions: **Watch** button, then **Custom**, then **Releases**. Arbora can also check by itself once a day (can be turned off in “About”).
+
+> On iPhone or iPad, file previews (Files, Mail, Instagram, WhatsApp) do not run the code. Use a computer, or open the file with an app that includes a browser.
+
+## Why Arbora
+
+- **100% local**: your data stays on your device. No server, no account, no third-party database.
+- **Decentralized**: everyone keeps their own tree instead of handing it to big data centers.
+- **Light and shareable**: one HTML file and JSON backups of a few hundred KB. Open formats (GEDCOM).
+- **Privacy-friendly**: no ads, no tracking. Living people can be hidden in copies shared with family.
+- **Durable**: no installation, no subscription, still readable in twenty years.
+
+## Features
+
+- Interactive tree with automatic layout, detailed records (read or edit mode), unions and divorces, photos and documents.
+- Ancestry, descendants, fan chart, timeline and map views, all filterable.
+- Statistics with “Did you know?”, personal insights for each person, relationship analysis.
+- Checks: impossible dates, loops, duplicates, formats, with research sources by country.
+- Animated family film (one person, one surname, the whole tree), exportable as a video.
+- GEDCOM and JSON import with duplicate merging. PDF, image, GEDCOM, JSON and draw.io exports, plus a shareable copy of the tool (editable or read-only).
+- Ready-to-use instructions to improve the tree or start it with an AI.
+- Six languages: English, French, Spanish, German, Italian, Portuguese. Light and dark themes.
+
+| Record | Statistics | Fan chart |
+|---|---|---|
+| ![Record](docs/fiche.png) | ![Statistics](docs/statistiques.png) | ![Fan chart](docs/eventail.png) |
+
+*Screenshots use a fictional family.*
+
+## Updating
+
+Download the new version, then in **Settings, Import**, choose **Update from an old copy** and select your old file: your tree is carried over. You can also import your latest JSON backup.
+
+## Good to know
+
+Improving the tree with an AI is the only feature that sends your data out: sending your file to an online AI means handing it to a company. The map background, place search (OpenStreetMap) and fonts load from the internet when possible, without any tree data.
+
+## Report a problem or suggest an idea
+
+Use the **[Issues](https://github.com/florentdoug/arbora/issues/new/choose)** tab. Please never attach a file containing real family data.
+
+## Support Arbora
+
+Arbora is free and will stay free. If you find it useful, you can buy its author a coffee on **[Ko-fi](https://ko-fi.com/florentdoug)**.
+
+## License
+
+Free software under the **GNU GPL v3** license: you can use, study, modify and share it, as long as modified versions stay free under the same license. Provided without warranty. Designed by **florentdoug**.
+
+---
+
+# Français
+
+[English](#arbora) · **Français**
+
+**Ton arbre généalogique, chez toi.** Arbora est un outil de généalogie complet qui tient dans un seul fichier HTML. Il s’ouvre dans n’importe quel navigateur et fonctionne hors ligne, sans compte et sans serveur.
 
 ## Télécharger
 
@@ -12,9 +75,9 @@
 2. Ouvre-le d’un double clic dans ton navigateur (Chrome, Edge, Firefox, Safari).
 3. Commence par toi, importe un fichier GEDCOM (MyHeritage, Geneanet…) ou démarre avec une IA.
 
-Pour être prévenu des nouvelles versions : bouton **Watch**, puis **Custom**, puis **Releases**. L’outil peut aussi vérifier lui-même une fois par jour (désactivable dans « À propos »).
+Pour être prévenu des nouvelles versions : bouton **Watch**, puis **Custom**, puis **Releases**. Arbora peut aussi vérifier lui-même une fois par jour (désactivable dans « À propos »).
 
-> Sur iPhone ou iPad, l’aperçu de l’app Fichiers n’exécute pas le code : ouvre le fichier dans un navigateur.
+> Sur iPhone ou iPad, les aperçus de fichiers (Fichiers, Mail, Instagram, WhatsApp) n’exécutent pas le code. Utilise un ordinateur, ou ouvre le fichier avec une app qui contient un navigateur.
 
 ## Pourquoi Arbora
 
@@ -34,10 +97,6 @@ Pour être prévenu des nouvelles versions : bouton **Watch**, puis **Custom**, 
 - Import GEDCOM et JSON avec fusion des doublons. Exports PDF, image, GEDCOM, JSON, draw.io, et copie partageable de l’outil (modifiable ou en lecture seule).
 - Consignes prêtes à l’emploi pour améliorer l’arbre ou le démarrer avec une IA.
 - Six langues : français, anglais, espagnol, allemand, italien, portugais. Thème clair et sombre.
-
-| Fiche | Statistiques | Éventail |
-|---|---|---|
-| ![Fiche](docs/fiche.png) | ![Statistiques](docs/statistiques.png) | ![Éventail](docs/eventail.png) |
 
 *Les captures utilisent une famille fictive.*
 
@@ -60,18 +119,3 @@ Arbora est gratuit et le restera. Si l’outil t’est utile, tu peux offrir un 
 ## Licence
 
 Logiciel libre sous licence **GNU GPL v3** : tu peux l’utiliser, l’étudier, le modifier et le redistribuer, à condition que les versions modifiées restent libres sous la même licence. Fourni sans garantie. Conçu par **florentdoug**.
-
----
-
-## English
-
-**Your family tree, at home.** Arbora is a complete genealogy tool in a single HTML file. Download `arbora-x.y.z.html` from **[Releases](https://github.com/florentdoug/arbora/releases/latest)**, open it in your browser, and start with yourself, import a GEDCOM file or start with an AI.
-
-- 100 % local, no account, no server, works offline.
-- Interactive tree, records, ancestry, fan chart, timeline, map, statistics, checks, family film, PDF, image, GEDCOM and JSON exports.
-- Six languages, light and dark themes.
-- To update: download the new version, then **Settings, Import, Update from an old copy**.
-- Bugs and ideas: **[Issues](https://github.com/florentdoug/arbora/issues/new/choose)**. Never attach real family data.
-- Arbora is free and will stay free. If you find it useful, you can buy its author a coffee on **[Ko-fi](https://ko-fi.com/florentdoug)**.
-
-Free software under the **GNU GPL v3** licence, provided without warranty. Designed by **florentdoug**.
