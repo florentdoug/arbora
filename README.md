@@ -4,7 +4,7 @@
 
 **Your family tree, at home.** Arbora is a complete genealogy tool in a single HTML file. It opens in any browser and works offline, with no account and no server.
 
-![Arbora, tree view](docs/arbre-light.png)
+![Arbora, tree view](docs/en/tree-light.png)
 
 ## Download
 
@@ -27,17 +27,20 @@ To be notified of new versions: **Watch** button, then **Custom**, then **Releas
 ## Features
 
 - Interactive tree with automatic layout, detailed records (read or edit mode), unions and divorces, photos and documents.
+- Delete a person or a family with the consequences explained first. Duplicate and loop tools to clean up the tree.
 - Ancestry, descendants, fan chart, timeline and map views, all filterable.
 - Statistics with “Did you know?”, personal insights for each person, relationship analysis.
 - Checks: impossible dates, loops, duplicates, formats, with research sources by country.
 - Animated family film (one person, one surname, the whole tree), exportable as a video.
-- GEDCOM and JSON import with duplicate merging. PDF, image, GEDCOM, JSON and draw.io exports, plus a shareable copy of the tool (editable or read-only).
+- GEDCOM and JSON import with duplicate merging. PDF, image, GEDCOM and JSON exports, plus a shareable copy of the tool (editable or read-only).
+- Share a single record (JSON or PDF) or a whole family: on import, people already in the tree are recognised and the family is linked in the right place.
+- Change history kept in the file, with a log you can export.
 - Ready-to-use instructions to improve the tree or start it with an AI.
 - Six languages: English, French, Spanish, German, Italian, Portuguese. Light and dark themes.
 
 | Record | Statistics | Fan chart |
 |---|---|---|
-| ![Record](docs/fiche.png) | ![Statistics](docs/statistiques.png) | ![Fan chart](docs/eventail.png) |
+| ![Record](docs/en/record.png) | ![Statistics](docs/en/statistics.png) | ![Fan chart](docs/en/fan-chart.png) |
 
 *Screenshots use a fictional family.*
 
@@ -69,6 +72,8 @@ Free software under the **GNU GPL v3** license: you can use, study, modify and s
 
 **Ton arbre généalogique, chez toi.** Arbora est un outil de généalogie complet qui tient dans un seul fichier HTML. Il s’ouvre dans n’importe quel navigateur et fonctionne hors ligne, sans compte et sans serveur.
 
+![Arbora, vue de l’arbre](docs/fr/arbre-light.png)
+
 ## Télécharger
 
 1. Va dans **[Releases](https://github.com/florentdoug/arbora/releases/latest)** et télécharge le fichier `arbora-x.y.z.html`.
@@ -90,13 +95,20 @@ Pour être prévenu des nouvelles versions : bouton **Watch**, puis **Custom**, 
 ## Fonctions
 
 - Arbre interactif à disposition automatique, fiches détaillées (lecture ou édition), unions et divorces, photos et documents.
+- Suppression d’une personne ou d’une famille avec les conséquences expliquées avant. Outils de doublons et de boucles pour nettoyer l’arbre.
 - Vues ascendance, descendance, éventail, frise et carte, toutes filtrables.
 - Statistiques avec « Le saviez-vous ? », informations personnalisées pour chaque personne, analyse de lien de parenté.
 - Vérifications : dates impossibles, boucles, doublons, formats, avec des sources de recherche par pays.
 - Film de famille animé (une personne, un nom, tout l’arbre), exportable en vidéo.
-- Import GEDCOM et JSON avec fusion des doublons. Exports PDF, image, GEDCOM, JSON, draw.io, et copie partageable de l’outil (modifiable ou en lecture seule).
+- Import GEDCOM et JSON avec fusion des doublons. Exports PDF, image, GEDCOM, JSON et copie partageable de l’outil (modifiable ou en lecture seule).
+- Partage d’une fiche (JSON ou PDF) ou d’une famille entière : à l’import, les personnes déjà présentes sont reconnues et la famille se rattache au bon endroit.
+- Historique des modifications gardé dans le fichier, avec un journal exportable.
 - Consignes prêtes à l’emploi pour améliorer l’arbre ou le démarrer avec une IA.
 - Six langues : français, anglais, espagnol, allemand, italien, portugais. Thème clair et sombre.
+
+| Fiche | Statistiques | Éventail |
+|---|---|---|
+| ![Fiche](docs/fr/fiche.png) | ![Statistiques](docs/fr/statistiques.png) | ![Éventail](docs/fr/eventail.png) |
 
 *Les captures utilisent une famille fictive.*
 
