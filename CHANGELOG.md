@@ -4,6 +4,30 @@
 
 All notable changes to Arbora. Version numbers follow major.minor.patch: a new feature bumps the second number, a fix bumps the third.
 
+## [1.2.0] - 2026-11-11
+
+### Added
+- **Family book as PDF**: cover, clickable contents, one entry per person (dates, places, parents, unions, children, life journey, notes, sources) with photos (or a blank icon when there is none), and an index. The cover carries the Arbora logo. Ancestors by generation with Sosa numbers, descendants, or the whole tree.
+- **Life journey**: free events (job, studies, military service, move, census, religion, award, property, other) with date, place and detail, shown as a timeline per person with the age at each step. Their places appear on the map.
+- **Structured sources**: a source is described once (type, repository and reference, link, reliability on 3 levels) and cited on several records, with what it proves. Source manager in the gear menu.
+- **Sosa numbering and pedigree collapse**: number on each record and in the Ancestors view, table of completeness per generation, list of shared ancestors, CSV export.
+- **Research to do** per record, gathered at the top of the Checks tab.
+- **Advanced search**: name, sex, status, birth years, place, occupation, branch, missing information, with CSV export of the results.
+- **Family calendar**: birthdays, wedding and death anniversaries for the next 30 days, and export as an .ics file for a phone or computer calendar.
+- **Compare with another file**: read-only overview of identical, different, new and missing people before importing.
+- **Password protection**: the tree is encrypted in the file (AES-GCM 256, key derived with PBKDF2) and the file asks for the password when opened.
+- **Life journeys on the map**: a line per person from birth to death through dated steps.
+- **Life journey in the record PDF**: optional (with or without) from the preview, always on one page.
+- **Easier to find**: Sosa button next to « Record » on every record, family calendar in the gear menu, « Download the latest version » in About is a direct link to the file, password window that offers to remove the protection first when it is on.
+- **Lighter file**: comments and useless spaces removed at build time (no change to the code itself).
+- **Keyboard shortcuts**: list with the `?` key, new shortcuts (`/`, `N`, `E`, `1`–`8`, `Shift+F`).
+- **Update and keep my tree**: the update banner can download the new version, put the open tree in it and save the file.
+- Direct download: the update banner downloads the new file directly, and each release carries a stable `arbora.html` file for a permanent download link. Project home page with an online demo.
+
+### Fixed
+- Update detection: a new version could go unnoticed for up to 24 hours, and the banner was shown only once. The known version is now remembered and shown every time the file is opened, the check runs at most once an hour, and a failed check is retried at the next opening.
+- A protected file no longer keeps unsaved changes in the browser cache.
+
 ## [1.1.0] - 2026-11-09
 
 ### Added
@@ -115,6 +139,30 @@ First public release.
 [English](#changelog--journal-des-versions) · **Français**
 
 Toutes les évolutions notables d’Arbora. Les numéros suivent le format majeur.mineur.correctif : une nouveauté fait monter le deuxième chiffre, une correction le troisième.
+
+## [1.2.0] - 2026-11-11
+
+### Nouveautés
+- **Livre de famille en PDF** : couverture, sommaire cliquable, une notice par personne (dates, lieux, parents, unions, enfants, parcours de vie, notes, sources) avec photos (ou une icône vierge quand il n’y en a pas), et un index. La couverture porte le logo Arbora. Ancêtres par génération avec numéros Sosa, descendants, ou tout l’arbre.
+- **Parcours de vie** : événements libres (métier, études, service militaire, déménagement, recensement, religion, distinction, propriété, autre) avec date, lieu et précision, affichés en frise par personne avec l’âge à chaque étape. Leurs lieux apparaissent sur la carte.
+- **Sources structurées** : une source se décrit une fois (type, lieu de conservation et cote, lien, fiabilité sur 3 niveaux) et se cite sur plusieurs fiches, avec ce qu’elle prouve. Gestion des sources dans la roue dentée.
+- **Numérotation Sosa et implexe** : numéro sur chaque fiche et dans la vue Ascendance, tableau de complétude par génération, liste des ancêtres communs, export CSV.
+- **Recherches à faire** par fiche, réunies en haut de l’onglet Vérifications.
+- **Recherche avancée** : nom, sexe, statut, années de naissance, lieu, profession, branche, informations manquantes, avec export CSV des résultats.
+- **Calendrier de la famille** : anniversaires, mariages et décès des 30 prochains jours, et export en fichier .ics pour l’agenda du téléphone ou de l’ordinateur.
+- **Comparer avec un autre fichier** : vue en lecture seule des personnes identiques, différentes, nouvelles et absentes avant d’importer.
+- **Protection par mot de passe** : l’arbre est chiffré dans le fichier (AES-GCM 256, clé dérivée par PBKDF2) et le fichier demande le mot de passe à l’ouverture.
+- **Parcours de vie sur la carte** : un trait par personne, de la naissance au décès en passant par les étapes datées.
+- **Parcours de vie dans la fiche PDF** : au choix (avec ou sans) depuis l’aperçu, toujours sur une page.
+- **Plus facile à trouver** : bouton Sosa à côté de « Fiche » sur chaque fiche, calendrier de la famille dans le menu engrenage, « Télécharger la dernière version » dans À propos en lien direct vers le fichier, fenêtre du mot de passe qui propose d’abord de retirer la protection quand elle est active.
+- **Fichier allégé** : commentaires et espaces inutiles retirés à la construction (sans toucher au code).
+- **Raccourcis clavier** : liste avec la touche `?`, nouveaux raccourcis (`/`, `N`, `E`, `1`–`8`, `Maj+F`).
+- **Mettre à jour en gardant mon arbre** : le bandeau de mise à jour peut télécharger la nouvelle version, y placer l’arbre ouvert et enregistrer le fichier.
+- Téléchargement direct : le bandeau de mise à jour télécharge directement le nouveau fichier, et chaque release contient un fichier `arbora.html` au nom fixe pour un lien de téléchargement permanent. Page d’accueil du projet avec une démo en ligne.
+
+### Corrections
+- Détection des mises à jour : une nouvelle version pouvait passer inaperçue jusqu’à 24 heures, et le bandeau ne s’affichait qu’une fois. La version connue est maintenant mémorisée et affichée à chaque ouverture, la vérification se fait au plus une fois par heure, et une vérification en échec est retentée à l’ouverture suivante.
+- Un fichier protégé ne garde plus de modifications non enregistrées dans le cache du navigateur.
 
 ## [1.1.0] - 2026-11-09
 

@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Arbora · L’arbre généalogique qui reste chez toi</title>
+<meta name="description" content="Arbora : un outil de généalogie complet dans un seul fichier HTML. Sans compte, sans serveur, hors ligne.">
+<style>
+:root{--bg:#f4f6f8;--surface:#fff;--ink:#1c2631;--muted:#5b6672;--line:#d9e0e7;--accent:#2e6b5f;--accent2:#245549}
+@media (prefers-color-scheme:dark){:root{--bg:#12181d;--surface:#1b2329;--ink:#e6ebf0;--muted:#9aa6b2;--line:#2c3740;--accent:#6fbfac;--accent2:#8fd3c2}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--accent)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:20px;color:var(--accent)}
+.lang{display:flex;gap:4px;border:1px solid var(--line);border-radius:999px;padding:3px;background:var(--surface)}
+.lang button{border:0;background:none;color:var(--muted);font:inherit;font-size:13px;font-weight:600;padding:4px 12px;border-radius:999px;cursor:pointer}
+.lang button.on{background:var(--accent);color:#fff}
+@media (prefers-color-scheme:dark){.lang button.on{color:#10201c}}
+.hero{text-align:center;padding:34px 0 26px}
+h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(30px,5vw,46px);line-height:1.15;margin:0 0 14px;text-wrap:balance}
+.lead{font-size:clamp(16px,2.2vw,19px);color:var(--muted);max-width:680px;margin:0 auto 26px;text-wrap:pretty}
+.cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:12px;font-weight:700;font-size:18px;text-decoration:none;border:2px solid var(--accent)}
+.btn.primary{background:var(--accent);color:#fff;box-shadow:0 8px 24px rgba(46,107,95,.3)}
+.btn.primary:hover{background:var(--accent2);border-color:var(--accent2)}
+@media (prefers-color-scheme:dark){.btn.primary{color:#10201c}}
+.btn.ghost{color:var(--accent);background:var(--surface)}
+.sub{margin:14px 0 0;font-size:13.5px;color:var(--muted)}
+.shot{margin:30px auto 0;border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 18px 50px rgba(0,0,0,.14);background:var(--surface)}
+.shot img{display:block;width:100%;height:auto}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:38px 0 10px}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px}
+.step b{display:flex;align-items:center;gap:10px;font-size:16px;margin-bottom:6px}
+.num{width:28px;height:28px;border-radius:50%;background:var(--accent);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:14px;flex:none}
+@media (prefers-color-scheme:dark){.num{color:#10201c}}
+.step p{margin:0;color:var(--muted);font-size:14.5px}
+h2{font-family:Georgia,serif;font-size:26px;margin:44px 0 16px;text-align:center}
+.feats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.feat{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:12px;padding:16px}
+.feat b{display:block;margin-bottom:4px}
+.feat span{color:var(--muted);font-size:14.5px}
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:8px}
+.gal figure{margin:0;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--surface)}
+.gal img{display:block;width:100%;height:auto}
+.gal figcaption{padding:8px 12px;font-size:13.5px;color:var(--muted)}
+.note{margin:26px auto 0;max-width:760px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 18px;font-size:14.5px;color:var(--muted)}
+footer{margin:46px 0 30px;padding-top:20px;border-top:1px solid var(--line);text-align:center;color:var(--muted);font-size:14px}
+footer a{margin:0 8px}
+@media (max-width:760px){.steps,.feats,.gal{grid-template-columns:1fr}.btn{width:100%;justify-content:center}}
+html[lang=fr] [data-l=en],html[lang=en] [data-l=fr]{display:none!important}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="brand">
+    <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><path d="M16 9v6M8 21v-3h16v3M16 15v3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><rect x="11" y="2" width="10" height="7" rx="2.5" fill="currentColor"/><rect x="2" y="21" width="12" height="8" rx="2.5" fill="#6a8db5"/><rect x="18" y="21" width="12" height="8" rx="2.5" fill="#b67985"/></svg>
+    Arbora
+  </div>
+  <div class="lang" role="group" aria-label="Langue / Language"><button type="button" data-set="fr">Français</button><button type="button" data-set="en">English</button></div>
+</header>
+
+<section class="hero">
+  <h1><span data-l="fr">L’arbre généalogique qui reste chez toi</span><span data-l="en">The family tree that stays at home</span></h1>
+  <p class="lead"><span data-l="fr">Arbora est un outil de généalogie complet dans un seul fichier. Tu le télécharges, tu l’ouvres dans ton navigateur, et c’est tout : pas de compte, pas d’installation, pas d’internet nécessaire.</span><span data-l="en">Arbora is a complete genealogy tool in a single file. Download it, open it in your browser, and that’s it: no account, no installation, no internet needed.</span></p>
+  <div class="cta">
+    <a class="btn primary" href="https://github.com/florentdoug/arbora/releases/latest/download/arbora.html" download>
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-5-5m5 5 5-5M5 21h14"/></svg>
+      <span data-l="fr">Télécharger Arbora</span><span data-l="en">Download Arbora</span>
+    </a>
+    <a class="btn ghost" href="demo.html"><span data-l="fr">Essayer la démo en ligne</span><span data-l="en">Try the online demo</span></a>
+  </div>
+  <p class="sub"><span data-l="fr">Gratuit et libre · un fichier d’environ 2 Mo · Windows, Mac, Linux</span><span data-l="en">Free and open · one file of about 2 MB · Windows, Mac, Linux</span></p>
+  <div class="shot"><img data-l="fr" src="docs/fr/arbre-light.png" alt="Arbora, vue de l’arbre"><img data-l="en" src="docs/en/tree-light.png" alt="Arbora, tree view"></div>
+</section>
+
+<section class="steps">
+  <div class="step"><b><span class="num">1</span><span data-l="fr">Télécharge</span><span data-l="en">Download</span></b><p><span data-l="fr">Clique sur « Télécharger Arbora ». Le fichier <code>arbora.html</code> arrive dans ton dossier Téléchargements.</span><span data-l="en">Click “Download Arbora”. The <code>arbora.html</code> file lands in your Downloads folder.</span></p></div>
+  <div class="step"><b><span class="num">2</span><span data-l="fr">Ouvre</span><span data-l="en">Open</span></b><p><span data-l="fr">Double-clique dessus : il s’ouvre dans Chrome, Edge, Firefox ou Safari.</span><span data-l="en">Double-click it: it opens in Chrome, Edge, Firefox or Safari.</span></p></div>
+  <div class="step"><b><span class="num">3</span><span data-l="fr">Commence</span><span data-l="en">Start</span></b><p><span data-l="fr">Crée ta fiche, ou importe un fichier GEDCOM de MyHeritage ou Geneanet. Enregistre : ton arbre est dans le fichier.</span><span data-l="en">Create your record, or import a GEDCOM file from MyHeritage or Geneanet. Save: your tree is inside the file.</span></p></div>
+</section>
+
+<h2><span data-l="fr">Pourquoi Arbora</span><span data-l="en">Why Arbora</span></h2>
+<section class="feats">
+  <div class="feat"><b><span data-l="fr">Tes données restent chez toi</span><span data-l="en">Your data stays with you</span></b><span><span data-l="fr">Rien n’est envoyé sur un serveur. Pas de publicité, pas de suivi. Tu peux même protéger le fichier par mot de passe.</span><span data-l="en">Nothing is sent to a server. No ads, no tracking. You can even protect the file with a password.</span></span></div>
+  <div class="feat"><b><span data-l="fr">Tout dans un fichier</span><span data-l="en">Everything in one file</span></b><span><span data-l="fr">L’outil, l’arbre, les photos et les documents. Facile à sauvegarder et à envoyer à la famille.</span><span data-l="en">The tool, the tree, the photos and the documents. Easy to back up and send to family.</span></span></div>
+  <div class="feat"><b><span data-l="fr">Complet</span><span data-l="en">Complete</span></b><span><span data-l="fr">Arbre interactif, ascendance, éventail, frise, carte, statistiques, vérifications, livre de famille en PDF.</span><span data-l="en">Interactive tree, ancestors, fan chart, timeline, map, statistics, checks, family book as PDF.</span></span></div>
+  <div class="feat"><b><span data-l="fr">Ouvert</span><span data-l="en">Open</span></b><span><span data-l="fr">Import et export GEDCOM, sauvegardes JSON, 6 langues. Ton arbre n’est jamais enfermé.</span><span data-l="en">GEDCOM import and export, JSON backups, 6 languages. Your tree is never locked in.</span></span></div>
+  <div class="feat"><b><span data-l="fr">Durable</span><span data-l="en">Durable</span></b><span><span data-l="fr">Pas d’abonnement. Le fichier s’ouvrira encore dans vingt ans, même sans internet.</span><span data-l="en">No subscription. The file will still open in twenty years, even without internet.</span></span></div>
+  <div class="feat"><b><span data-l="fr">À jour simplement</span><span data-l="en">Simple updates</span></b><span><span data-l="fr">Arbora te prévient d’une nouvelle version et se met à jour en gardant ton arbre.</span><span data-l="en">Arbora tells you about a new version and updates itself while keeping your tree.</span></span></div>
+</section>
+
+<h2><span data-l="fr">En images</span><span data-l="en">In pictures</span></h2>
+<section class="gal">
+  <figure><img data-l="fr" src="docs/fr/fiche.png" alt=""><img data-l="en" src="docs/en/record.png" alt=""><figcaption><span data-l="fr">La fiche d’une personne</span><span data-l="en">A person’s record</span></figcaption></figure>
+  <figure><img data-l="fr" src="docs/fr/eventail.png" alt=""><img data-l="en" src="docs/en/fan-chart.png" alt=""><figcaption><span data-l="fr">L’éventail des ancêtres</span><span data-l="en">The ancestor fan chart</span></figcaption></figure>
+  <figure><img data-l="fr" src="docs/fr/statistiques.png" alt=""><img data-l="en" src="docs/en/statistics.png" alt=""><figcaption><span data-l="fr">Les statistiques</span><span data-l="en">Statistics</span></figcaption></figure>
+</section>
+
+<p class="note"><span data-l="fr">Sur iPhone ou iPad, l’aperçu de fichier n’exécute pas l’outil. Utilise un ordinateur, ou la démo en ligne pour découvrir Arbora. Les captures montrent une famille fictive.</span><span data-l="en">On iPhone or iPad, the file preview does not run the tool. Use a computer, or the online demo to discover Arbora. Screenshots show a fictional family.</span></p>
+
+<footer>
+  <a href="https://github.com/florentdoug/arbora"><span data-l="fr">Code source</span><span data-l="en">Source code</span></a>
+  <a href="https://github.com/florentdoug/arbora/blob/main/CHANGELOG.md"><span data-l="fr">Nouveautés</span><span data-l="en">What’s new</span></a>
+  <a href="https://github.com/florentdoug/arbora/discussions"><span data-l="fr">Discussions</span><span data-l="en">Discussions</span></a>
+  <a href="https://ko-fi.com/florentdoug"><span data-l="fr">Offrir un café</span><span data-l="en">Buy me a coffee</span></a>
+  <p><span data-l="fr">Conçu par florentdoug</span><span data-l="en">Designed by florentdoug</span></p>
+</footer>
+</div>
+<script>
+(function(){var l="fr";try{l=localStorage.getItem("arbora-site-lang")||(/^fr/i.test(navigator.language||"")?"fr":"en")}catch(e){}
+  var set=function(v){document.documentElement.lang=v;document.querySelectorAll(".lang button").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-set")===v)});
+    document.title=v==="fr"?"Arbora · L’arbre généalogique qui reste chez toi":"Arbora · The family tree that stays at home";try{localStorage.setItem("arbora-site-lang",v)}catch(e){}};
+  document.querySelectorAll(".lang button").forEach(function(b){b.onclick=function(){set(b.getAttribute("data-set"))}});set(l)})();
+</script>
+</body>
+</html>

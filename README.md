@@ -8,11 +8,15 @@
 
 ## Download
 
-1. Go to **[Releases](https://github.com/florentdoug/arbora/releases/latest)** and download the `arbora-x.y.z.html` file.
+<a href="https://github.com/florentdoug/arbora/releases/latest/download/arbora.html"><img src="docs/download-en.svg" alt="Download Arbora" height="56"></a>
+
+1. Click the button: the latest `arbora.html` file downloads directly.
 2. Double-click it to open it in your browser (Chrome, Edge, Firefox, Safari).
 3. Start with yourself, import a GEDCOM file (MyHeritage, Geneanet…) or start with an AI.
 
-To be notified of new versions: **Watch** button, then **Custom**, then **Releases**. Arbora can also check by itself once a day (can be turned off in “About”).
+Want to try it first? Open the **[online demo](https://florentdoug.github.io/arbora/demo.html)** with a fictional family. All versions are listed in **[Releases](https://github.com/florentdoug/arbora/releases)**.
+
+Arbora tells you when a new version is out each time you open your file (can be turned off in “About”), and can update itself while keeping your tree.
 
 > On iPhone or iPad, file previews (Files, Mail, Instagram, WhatsApp) do not run the code. Use a computer, or open the file with an app that includes a browser.
 
@@ -26,6 +30,7 @@ To be notified of new versions: **Watch** button, then **Custom**, then **Releas
 
 ## Features
 
+- **New in 1.2.0**: family book as PDF, life journey with a timeline per person, structured sources with reliability, Sosa numbering and shared ancestors, research to-do lists, advanced search, family calendar (.ics), comparison of two files, password protection, life journeys on the map, keyboard shortcuts.
 - Interactive tree with automatic layout, detailed records (read or edit mode), unions and divorces, photos and documents.
 - Delete a person or a family with the consequences explained first. Duplicate and loop tools to clean up the tree.
 - Ancestry, descendants, fan chart, timeline and map views, all filterable.
@@ -46,7 +51,7 @@ To be notified of new versions: **Watch** button, then **Custom**, then **Releas
 
 ## Updating
 
-Download the new version, then in **Settings, Import**, choose **Update from an old copy** and select your old file: your tree is carried over. You can also import your latest JSON backup.
+From version 1.2.0, the update banner offers **Update and keep my tree**: Arbora downloads the new version, puts your tree in it and saves the file. Otherwise, download the new version, then in **Settings, Import**, choose **Update from an old copy** and select your old file. You can also import your latest JSON backup.
 
 ## Good to know
 
@@ -76,11 +81,15 @@ Free software under the **GNU GPL v3** license: you can use, study, modify and s
 
 ## Télécharger
 
-1. Va dans **[Releases](https://github.com/florentdoug/arbora/releases/latest)** et télécharge le fichier `arbora-x.y.z.html`.
+<a href="https://github.com/florentdoug/arbora/releases/latest/download/arbora.html"><img src="docs/telecharger-fr.svg" alt="Télécharger Arbora" height="56"></a>
+
+1. Clique sur le bouton : le dernier fichier `arbora.html` se télécharge directement.
 2. Ouvre-le d’un double clic dans ton navigateur (Chrome, Edge, Firefox, Safari).
 3. Commence par toi, importe un fichier GEDCOM (MyHeritage, Geneanet…) ou démarre avec une IA.
 
-Pour être prévenu des nouvelles versions : bouton **Watch**, puis **Custom**, puis **Releases**. Arbora peut aussi vérifier lui-même une fois par jour (désactivable dans « À propos »).
+Envie d’essayer d’abord ? Ouvre la **[démo en ligne](https://florentdoug.github.io/arbora/demo.html)** avec une famille fictive. Toutes les versions sont dans **[Releases](https://github.com/florentdoug/arbora/releases)**.
+
+Arbora te prévient d’une nouvelle version à chaque ouverture de ton fichier (désactivable dans « À propos »), et peut se mettre à jour tout seul en gardant ton arbre.
 
 > Sur iPhone ou iPad, les aperçus de fichiers (Fichiers, Mail, Instagram, WhatsApp) n’exécutent pas le code. Utilise un ordinateur, ou ouvre le fichier avec une app qui contient un navigateur.
 
@@ -94,6 +103,7 @@ Pour être prévenu des nouvelles versions : bouton **Watch**, puis **Custom**, 
 
 ## Fonctions
 
+- **Nouveau en 1.2.0** : livre de famille en PDF, parcours de vie avec une frise par personne, sources structurées avec fiabilité, numérotation Sosa et ancêtres communs, listes de recherches à faire, recherche avancée, calendrier de la famille (.ics), comparaison de deux fichiers, protection par mot de passe, parcours de vie sur la carte, raccourcis clavier.
 - Arbre interactif à disposition automatique, fiches détaillées (lecture ou édition), unions et divorces, photos et documents.
 - Suppression d’une personne ou d’une famille avec les conséquences expliquées avant. Outils de doublons et de boucles pour nettoyer l’arbre.
 - Vues ascendance, descendance, éventail, frise et carte, toutes filtrables.
@@ -114,7 +124,7 @@ Pour être prévenu des nouvelles versions : bouton **Watch**, puis **Custom**, 
 
 ## Mettre à jour
 
-Télécharge la nouvelle version, puis dans **Paramètres, Importer**, choisis **Mettre à jour depuis une ancienne copie** et sélectionne ton ancien fichier : ton arbre est repris. Tu peux aussi importer ta dernière sauvegarde JSON.
+À partir de la version 1.2.0, le bandeau de mise à jour propose **Mettre à jour en gardant mon arbre** : Arbora télécharge la nouvelle version, y place ton arbre et enregistre le fichier. Sinon, télécharge la nouvelle version, puis dans **Paramètres, Importer**, choisis **Mettre à jour depuis une ancienne copie** et sélectionne ton ancien fichier. Tu peux aussi importer ta dernière sauvegarde JSON.
 
 ## À savoir
 
