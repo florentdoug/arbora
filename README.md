@@ -57,6 +57,13 @@ Your tree lives inside the file: save it, back it up, send it to your family. Ar
 - **Open.** GEDCOM and JSON import and export, six languages, light and dark themes. Your tree is never locked in.
 - **Durable.** No subscription, no installation. The file will still open in twenty years.
 
+## New in 1.4.0
+
+- **One person's journey on the map**, with numbered steps.
+- **Reorder residences** by dragging them in the record.
+- **Guided updates**: the current file can be replaced directly, or a window explains how to switch to the new one.
+- **Sosa numbering** can be hidden everywhere, **About** redesigned, round and large photos by default.
+
 ## New in 1.3.0
 
 - **Hourglass view**: the ancestors on the left and the descendants on the right of one person.
@@ -116,7 +123,7 @@ Full details in the [CHANGELOG](CHANGELOG.md).
 
 ## Updating
 
-The update banner offers **Update and keep my tree**: Arbora downloads the new version, puts your tree in it and saves the file. Otherwise, download the new version, then in **Settings, Import**, choose **Update from an old copy**. You can also import your latest JSON backup.
+The update banner offers **Update and keep my tree**: Arbora downloads the new version, puts your tree in it and replaces your file (Chrome, Edge, Brave) or saves a new one and guides you to it. Otherwise, download the new version, then in **Settings, Import**, choose **Update from an old copy**. You can also import your latest JSON backup.
 
 ## Good to know
 
@@ -190,6 +197,13 @@ Ton arbre vit dans le fichier : enregistre-le, sauvegarde-le, envoie-le à ta fa
 - **Ouvert.** Import et export GEDCOM et JSON, six langues, thème clair et sombre. Ton arbre n’est jamais enfermé.
 - **Durable.** Pas d’abonnement, pas d’installation. Le fichier s’ouvrira encore dans vingt ans.
 
+## Nouveau en 1.4.0
+
+- **Parcours d’une personne sur la carte**, avec les étapes numérotées.
+- **Réordonner les résidences** en les glissant dans la fiche.
+- **Mise à jour guidée** : le fichier actuel peut être remplacé directement, sinon une fenêtre explique comment passer au nouveau.
+- **Numérotation Sosa** désactivable partout, **À propos** remanié, photos rondes et grandes par défaut.
+
 ## Nouveau en 1.3.0
 
 - **Vue Sablier** : les ancêtres à gauche et les descendants à droite d’une même personne.
@@ -249,7 +263,7 @@ Détail complet dans le [CHANGELOG](CHANGELOG.md#français).
 
 ## Mettre à jour
 
-Le bandeau de mise à jour propose **Mettre à jour en gardant mon arbre** : Arbora télécharge la nouvelle version, y place ton arbre et enregistre le fichier. Sinon, télécharge la nouvelle version, puis dans **Paramètres, Importer**, choisis **Mettre à jour depuis une ancienne copie**. Tu peux aussi importer ta dernière sauvegarde JSON.
+Le bandeau de mise à jour propose **Mettre à jour en gardant mon arbre** : Arbora télécharge la nouvelle version, y place ton arbre et remplace ton fichier (Chrome, Edge, Brave) ou en enregistre un nouveau et te guide pour passer dessus. Sinon, télécharge la nouvelle version, puis dans **Paramètres, Importer**, choisis **Mettre à jour depuis une ancienne copie**. Tu peux aussi importer ta dernière sauvegarde JSON.
 
 ## À savoir
 

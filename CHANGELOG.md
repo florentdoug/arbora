@@ -4,6 +4,31 @@
 
 All notable changes to Arbora. Version numbers follow major.minor.patch: a new feature bumps the second number, a fix bumps the third.
 
+## [1.4.0] - 2026-11-15
+
+### Added
+- **Reorder residences**: in edit mode, each residence has a handle to drag it into place, plus up and down arrows (handy on phones). The life journey, the map and the distance travelled follow this order, and the move can be undone.
+- **One person's journey on the map**: pick a person in the new field above the map to see only their journey, with numbered steps (birth, baptism, residences, journey, marriages, death) and the map framed on it.
+- **Sosa numbering can be hidden everywhere**: Settings, Display, « Sosa numbering ». It hides the numbers in records, ancestors, hourglass, record PDF and family book.
+- **d’Aboville numbering can be hidden everywhere**, like Sosa (Settings, Display).
+- **Record header**: the name now sits at the top in place of « Record », with the current age below (or « Died aged … » with the years).
+- **Guided switch to the new file after an update**: on Chrome, Edge and Brave, the current file can be replaced directly (no duplicate, then « Reload now »). Otherwise a window explains the 3 steps with the exact file name. The new file welcomes you on first opening, and an old copy warns that a newer file exists.
+
+### Changed
+- **About redesigned**, wider: version status (« Up to date », « Not checked yet » or « New version available ») on the same line as « Check », « Discover Arbora » (presentation page) and a glowing « Support Arbora » card side by side (« Buy the creator a coffee »), « Why Arbora » folded into a single line. The direct download button is replaced by the presentation page.
+- **Settings redesigned**: three columns (File and tree tools, Display, Help and maintenance) with an icon in front of each entry and each display option.
+- **Map**: « Life journeys » is now a clearly visible switch with a route icon, aligned with the rest, and the person field looks like the main search. The chosen person's journey is drawn in gold (like the highlighted person) and the other bubbles are hidden.
+- **Gallery**: the same « Show » filter as the other views, plus a person's ancestors or descendants.
+- **PDF exports**: larger « Arbora » header with the logo in colour at the top left of every page.
+- **AI instructions updated** (improve and start with an AI, 6 languages): they now describe the fields added since 1.0 (life journey, witnesses and godparents, structured and cited sources, research to do, adoption and foster links, life photos) and what the AI must never change. Research leads go into « Research to do » instead of the notes.
+- **Defaults**: round and large photos in the boxes, small tree text. Settings already chosen are kept.
+- **Record**: the Sex field has its icon, like the other fields.
+
+### Fixed
+- Gallery: the list now scrolls when the images go beyond the window.
+- About: the « Download the latest version » button was hard to read in light mode (removed, see above).
+- Gallery: the chosen branch did not stay displayed in its list after selection.
+
 ## [1.3.0] - 2026-11-13
 
 ### Added
@@ -192,6 +217,31 @@ First public release.
 [English](#changelog--journal-des-versions) · **Français**
 
 Toutes les évolutions notables d’Arbora. Les numéros suivent le format majeur.mineur.correctif : une nouveauté fait monter le deuxième chiffre, une correction le troisième.
+
+## [1.4.0] - 2026-11-15
+
+### Ajouts
+- **Réordonner les résidences** : en mode modification, chaque résidence a une poignée pour la glisser à sa place, et des flèches monter et descendre (pratiques sur téléphone). Le parcours de vie, la carte et les kilomètres parcourus suivent cet ordre, et le déplacement peut être annulé.
+- **Parcours d’une personne sur la carte** : choisis une personne dans le nouveau champ au-dessus de la carte pour ne voir que son parcours, avec les étapes numérotées (naissance, baptême, résidences, parcours, mariages, décès) et la carte cadrée dessus.
+- **Numérotation Sosa désactivable partout** : Paramètres, Affichage, « Numérotation Sosa ». Les numéros disparaissent des fiches, de l’ascendance, du sablier, de la fiche PDF et du livre de famille.
+- **Numérotation d’Aboville désactivable partout**, comme le Sosa (Paramètres, Affichage).
+- **En-tête de fiche** : le nom remonte à la place de « Fiche », avec l’âge actuel en dessous (ou « Décédé à … » avec les années).
+- **Passage guidé vers le nouveau fichier après une mise à jour** : sur Chrome, Edge et Brave, le fichier actuel peut être remplacé directement (pas de doublon, puis « Recharger maintenant »). Sinon, une fenêtre explique les 3 étapes avec le nom exact du fichier. Le nouveau fichier souhaite la bienvenue à sa première ouverture, et une ancienne copie signale qu’un fichier plus récent existe.
+
+### Changements
+- **À propos remanié**, plus large : état de la version (« À jour », « Pas encore vérifiée » ou « Nouvelle version disponible ») sur la même ligne que « Vérifier », tuiles « Découvrir Arbora » (page de présentation) et « Soutenir Arbora » qui brille, côte à côte (« Offre un café au créateur »), « Pourquoi Arbora » replié sur une ligne. Le bouton de téléchargement direct est remplacé par la page de présentation.
+- **Paramètres remaniés** : trois colonnes (Fichier et outils de l’arbre, Affichage, Aide et maintenance), avec une icône devant chaque entrée et chaque option d’affichage.
+- **Carte** : « Parcours de vie » devient un interrupteur bien visible avec une icône de trajet, aligné avec le reste, et le champ de personne reprend le style de la recherche principale. Le parcours de la personne choisie est tracé en or (comme la personne mise en évidence) et les autres bulles sont masquées.
+- **Galerie** : le même filtre « Afficher » que les autres vues, avec en plus les ancêtres ou les descendants d’une personne.
+- **Exports PDF** : en-tête « Arbora » avec le logo en couleur et plus grand, en haut à gauche de chaque page.
+- **Consignes IA mises à jour** (améliorer et démarrer avec une IA, 6 langues) : elles décrivent les champs ajoutés depuis la 1.0 (parcours de vie, témoins, parrains et marraines, sources structurées et citées, recherches à faire, adoption et accueil, photos de la vie) et ce que l’IA ne doit jamais modifier. Les pistes de recherche vont dans « Recherches à faire » au lieu des notes.
+- **Réglages par défaut** : photos rondes et grandes dans les cases, texte de l’arbre petit. Les réglages déjà choisis sont conservés.
+- **Fiche** : le champ Sexe a son icône, comme les autres champs.
+
+### Corrections
+- Galerie : la liste défile maintenant quand les images dépassent la fenêtre.
+- À propos : le bouton « Télécharger la dernière version » était peu lisible en mode clair (retiré, voir plus haut).
+- Galerie : la branche choisie ne restait pas affichée dans sa liste après la sélection.
 
 ## [1.3.0] - 2026-11-13
 
