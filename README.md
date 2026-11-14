@@ -1,57 +1,122 @@
-# Arbora
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/logo-dark.svg">
+    <img src="docs/logo-light.svg" alt="Arbora" width="300">
+  </picture>
+</p>
 
-**English** · [Français](#français)
+<h3 align="center">Your family tree, at home.</h3>
 
-**Your family tree, at home.** Arbora is a complete genealogy tool in a single HTML file. It opens in any browser and works offline, with no account and no server.
+<p align="center">
+  A complete genealogy tool in a single HTML file.<br>
+  No account, no server, no installation. It even works offline.
+</p>
 
-![Arbora, tree view](docs/en/tree-light.png)
+<p align="center">
+  <a href="https://github.com/florentdoug/arbora/releases/latest"><img src="https://img.shields.io/github/v/release/florentdoug/arbora?label=version&color=2e6b5f" alt="Latest version"></a>
+  <img src="https://img.shields.io/badge/size-about%201%20MB-2e6b5f" alt="About 1 MB">
+  <img src="https://img.shields.io/badge/languages-6-2e6b5f" alt="6 languages">
+  <a href="#license"><img src="https://img.shields.io/badge/license-GPL%20v3-2e6b5f" alt="GPL v3"></a>
+</p>
 
-## Download
+<p align="center">
+  <b>English</b> · <a href="#français">Français</a>
+</p>
 
-<a href="https://github.com/florentdoug/arbora/releases/latest/download/arbora.html"><img src="docs/download-en.svg" alt="Download Arbora" height="56"></a>
+<p align="center">
+  <a href="https://github.com/florentdoug/arbora/releases/latest/download/arbora.html"><img src="docs/download-en.svg" alt="Download Arbora" height="56"></a>
+</p>
 
-1. Click the button: the latest `arbora.html` file downloads directly.
-2. Double-click it to open it in your browser (Chrome, Edge, Firefox, Safari).
-3. Start with yourself, import a GEDCOM file (MyHeritage, Geneanet…) or start with an AI.
+<p align="center">
+  <a href="https://florentdoug.github.io/arbora/demo.html"><b>Try the online demo</b></a> · <a href="https://florentdoug.github.io/arbora/">Website</a> · <a href="https://github.com/florentdoug/arbora/releases">All versions</a>
+</p>
 
-Want to try it first? Open the **[online demo](https://florentdoug.github.io/arbora/demo.html)** with a fictional family. All versions are listed in **[Releases](https://github.com/florentdoug/arbora/releases)**.
+<table>
+  <tr><th>Light</th><th>Dark</th></tr>
+  <tr>
+    <td><img src="docs/en/tree-light.png" alt="Tree and record, light theme"></td>
+    <td><img src="docs/en/tree-dark.png" alt="Tree and record, dark theme"></td>
+  </tr>
+</table>
 
-Arbora tells you when a new version is out each time you open your file (can be turned off in “About”), and can update itself while keeping your tree.
+## Get started in one minute
 
-> On iPhone or iPad, file previews (Files, Mail, Instagram, WhatsApp) do not run the code. Use a computer, or open the file with an app that includes a browser.
+1. **Download** `arbora.html` with the button above.
+2. **Open** it with a double click, in Chrome, Edge, Firefox or Safari.
+3. **Start** with yourself, import a GEDCOM file (MyHeritage, Geneanet…), start with an AI, or explore the **example tree** first.
+
+Your tree lives inside the file: save it, back it up, send it to your family. Arbora tells you when a new version is out and **updates itself while keeping your tree**.
+
+> On iPhone or iPad, file previews (Files, Mail, WhatsApp) do not run the code. Use a computer, or the online demo.
 
 ## Why Arbora
 
-- **100% local**: your data stays on your device. No server, no account, no third-party database.
-- **Decentralized**: everyone keeps their own tree instead of handing it to big data centers.
-- **Light and shareable**: one HTML file and JSON backups of a few hundred KB. Open formats (GEDCOM).
-- **Privacy-friendly**: no ads, no tracking. Living people can be hidden in copies shared with family.
-- **Durable**: no installation, no subscription, still readable in twenty years.
+- **Your data stays with you.** Nothing is sent to a server. No ads, no tracking, and you can protect the file with a password.
+- **Everything in one file.** The tool, the tree, the photos and the documents, in about 1 MB plus your images.
+- **Complete.** Tree, record, hourglass, fan chart, timeline, map, gallery, statistics, checks, family book as PDF.
+- **Open.** GEDCOM and JSON import and export, six languages, light and dark themes. Your tree is never locked in.
+- **Durable.** No subscription, no installation. The file will still open in twenty years.
 
-## Features
+## New in 1.3.0
 
-- **New in 1.2.0**: family book as PDF, life journey with a timeline per person, structured sources with reliability, Sosa numbering and shared ancestors, research to-do lists, advanced search, family calendar (.ics), comparison of two files, password protection, life journeys on the map, keyboard shortcuts.
-- Interactive tree with automatic layout, detailed records (read or edit mode), unions and divorces, photos and documents.
-- Delete a person or a family with the consequences explained first. Duplicate and loop tools to clean up the tree.
-- Ancestry, descendants, fan chart, timeline and map views, all filterable.
-- Statistics with “Did you know?”, personal insights for each person, relationship analysis.
-- Checks: impossible dates, loops, duplicates, formats, with research sources by country.
-- Animated family film (one person, one surname, the whole tree), exportable as a video.
-- GEDCOM and JSON import with duplicate merging. PDF, image, GEDCOM and JSON exports, plus a shareable copy of the tool (editable or read-only).
-- Share a single record (JSON or PDF) or a whole family: on import, people already in the tree are recognised and the family is linked in the right place.
-- Change history kept in the file, with a log you can export.
+- **Hourglass view**: the ancestors on the left and the descendants on the right of one person.
+- **Gallery** of all photos and documents, with a contact sheet as PDF.
+- **Witnesses and godparents**, **adoption and foster links**.
+- **Search across all content**, **favourites**, **CSV import**, **French Republican calendar**, **historical landmarks**.
+- **Customisable record PDF**: 8 palettes, 3 layouts, modern or classic font, and the content of your choice.
+- **Checks that guide you** from one remark to the next, with « Why? » on each.
+- **Example tree** to try everything risk-free, **lighten images** with a real before and after preview.
+- **A file half the size**: about 1 MB instead of 2.1 MB, with nothing removed.
+
+Full details in the [CHANGELOG](CHANGELOG.md).
+
+## In pictures
+
+<table>
+  <tr><th width="50%">Light</th><th width="50%">Dark</th></tr>
+  <tr><td colspan="2"><b>Hourglass</b>: ancestors and descendants of one person</td></tr>
+  <tr><td><img src="docs/en/hourglass-light.png" alt="Hourglass, light"></td><td><img src="docs/en/hourglass-dark.png" alt="Hourglass, dark"></td></tr>
+  <tr><td colspan="2"><b>Fan chart</b> of ancestors</td></tr>
+  <tr><td><img src="docs/en/fan-chart-light.png" alt="Fan chart, light"></td><td><img src="docs/en/fan-chart-dark.png" alt="Fan chart, dark"></td></tr>
+  <tr><td colspan="2"><b>Statistics</b>, records and curiosities</td></tr>
+  <tr><td><img src="docs/en/statistics-light.png" alt="Statistics, light"></td><td><img src="docs/en/statistics-dark.png" alt="Statistics, dark"></td></tr>
+  <tr><td colspan="2"><b>Timeline</b> of lives</td></tr>
+  <tr><td><img src="docs/en/timeline-light.png" alt="Timeline, light"></td><td><img src="docs/en/timeline-dark.png" alt="Timeline, dark"></td></tr>
+  <tr><td colspan="2"><b>Record as PDF</b>, customisable</td></tr>
+  <tr><td><img src="docs/en/record-pdf-light.png" alt="Record PDF, light"></td><td><img src="docs/en/record-pdf-dark.png" alt="Record PDF, dark"></td></tr>
+</table>
+
+<sub>Screenshots use a fictional family.</sub>
+
+## All features
+
+<details>
+<summary><b>See the full list</b></summary>
+
+- Interactive tree with automatic layout, detailed records (read or edit mode) with field icons, unions and divorces, photos and documents, life photos.
+- Ancestors, descendants, hourglass (with d’Aboville numbering), fan chart, timeline, map and gallery views.
+- Life journey per person (job, studies, moves…) with the age at each step and optional historical landmarks.
+- Structured sources with reliability, witnesses and godparents, adoption and foster links.
+- Sosa numbering, shared ancestors and completeness per generation.
+- Statistics with « Did you know? », records and curiosities, a portrait for each filter, personal insights, relationship analysis.
+- Checks: impossible dates, loops, duplicates, formats, places to harmonise, research leads by country, progress over time.
+- Family book as PDF, customisable one-page record PDF, gallery contact sheet, image and GEDCOM exports.
+- Animated family film, exportable as a video.
+- GEDCOM, JSON and CSV import, with a clear choice between merging and replacing, and duplicate merging.
+- Share a record or a whole family: on import, people already in the tree are recognised.
+- Shareable copy of the tool (editable or read-only), living people can be hidden.
+- Password protection, change history kept in the file, exportable log.
+- Family calendar (.ics), « Today in the family » reminder, favourites, advanced search, keyboard shortcuts (`?` key).
+- Map with life journeys and one-click refresh of all places.
+- Image lightening with a real preview and sending limits (email, Discord).
 - Ready-to-use instructions to improve the tree or start it with an AI.
-- Six languages: English, French, Spanish, German, Italian, Portuguese. Light and dark themes.
+- Six languages: English, French, Spanish, German, Italian, Portuguese. Light and dark themes, colour themes.
 
-| Record | Statistics | Fan chart |
-|---|---|---|
-| ![Record](docs/en/record.png) | ![Statistics](docs/en/statistics.png) | ![Fan chart](docs/en/fan-chart.png) |
-
-*Screenshots use a fictional family.*
+</details>
 
 ## Updating
 
-From version 1.2.0, the update banner offers **Update and keep my tree**: Arbora downloads the new version, puts your tree in it and saves the file. Otherwise, download the new version, then in **Settings, Import**, choose **Update from an old copy** and select your old file. You can also import your latest JSON backup.
+The update banner offers **Update and keep my tree**: Arbora downloads the new version, puts your tree in it and saves the file. Otherwise, download the new version, then in **Settings, Import**, choose **Update from an old copy**. You can also import your latest JSON backup.
 
 ## Good to know
 
@@ -59,7 +124,7 @@ Improving the tree with an AI is the only feature that sends your data out: send
 
 ## Report a problem or suggest an idea
 
-Use the **[Issues](https://github.com/florentdoug/arbora/issues/new/choose)** tab. Please never attach a file containing real family data.
+Use the **[Issues](https://github.com/florentdoug/arbora/issues/new/choose)** tab or the **[Discussions](https://github.com/florentdoug/arbora/discussions)**. Please never attach a file containing real family data.
 
 ## Support Arbora
 
@@ -71,60 +136,120 @@ Free software under the **GNU GPL v3** license: you can use, study, modify and s
 
 ---
 
-# Français
+<a id="français"></a>
 
-[English](#arbora) · **Français**
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/logo-dark.svg">
+    <img src="docs/logo-light.svg" alt="Arbora" width="300">
+  </picture>
+</p>
 
-**Ton arbre généalogique, chez toi.** Arbora est un outil de généalogie complet qui tient dans un seul fichier HTML. Il s’ouvre dans n’importe quel navigateur et fonctionne hors ligne, sans compte et sans serveur.
+<h3 align="center">Ton arbre généalogique, chez toi.</h3>
 
-![Arbora, vue de l’arbre](docs/fr/arbre-light.png)
+<p align="center">
+  Un outil de généalogie complet dans un seul fichier HTML.<br>
+  Sans compte, sans serveur, sans installation. Il fonctionne même hors ligne.
+</p>
 
-## Télécharger
+<p align="center">
+  <a href="#readme">English</a> · <b>Français</b>
+</p>
 
-<a href="https://github.com/florentdoug/arbora/releases/latest/download/arbora.html"><img src="docs/telecharger-fr.svg" alt="Télécharger Arbora" height="56"></a>
+<p align="center">
+  <a href="https://github.com/florentdoug/arbora/releases/latest/download/arbora.html"><img src="docs/telecharger-fr.svg" alt="Télécharger Arbora" height="56"></a>
+</p>
 
-1. Clique sur le bouton : le dernier fichier `arbora.html` se télécharge directement.
-2. Ouvre-le d’un double clic dans ton navigateur (Chrome, Edge, Firefox, Safari).
-3. Commence par toi, importe un fichier GEDCOM (MyHeritage, Geneanet…) ou démarre avec une IA.
+<p align="center">
+  <a href="https://florentdoug.github.io/arbora/demo.html"><b>Essayer la démo en ligne</b></a> · <a href="https://florentdoug.github.io/arbora/">Site web</a> · <a href="https://github.com/florentdoug/arbora/releases">Toutes les versions</a>
+</p>
 
-Envie d’essayer d’abord ? Ouvre la **[démo en ligne](https://florentdoug.github.io/arbora/demo.html)** avec une famille fictive. Toutes les versions sont dans **[Releases](https://github.com/florentdoug/arbora/releases)**.
+<table>
+  <tr><th>Clair</th><th>Sombre</th></tr>
+  <tr>
+    <td><img src="docs/fr/arbre-light.png" alt="Arbre et fiche, thème clair"></td>
+    <td><img src="docs/fr/arbre-dark.png" alt="Arbre et fiche, thème sombre"></td>
+  </tr>
+</table>
 
-Arbora te prévient d’une nouvelle version à chaque ouverture de ton fichier (désactivable dans « À propos »), et peut se mettre à jour tout seul en gardant ton arbre.
+## Démarrer en une minute
 
-> Sur iPhone ou iPad, les aperçus de fichiers (Fichiers, Mail, Instagram, WhatsApp) n’exécutent pas le code. Utilise un ordinateur, ou ouvre le fichier avec une app qui contient un navigateur.
+1. **Télécharge** `arbora.html` avec le bouton ci-dessus.
+2. **Ouvre-le** d’un double clic, dans Chrome, Edge, Firefox ou Safari.
+3. **Commence** par toi, importe un fichier GEDCOM (MyHeritage, Geneanet…), démarre avec une IA, ou explore d’abord **l’arbre d’exemple**.
+
+Ton arbre vit dans le fichier : enregistre-le, sauvegarde-le, envoie-le à ta famille. Arbora te prévient d’une nouvelle version et **se met à jour en gardant ton arbre**.
+
+> Sur iPhone ou iPad, les aperçus de fichiers (Fichiers, Mail, WhatsApp) n’exécutent pas le code. Utilise un ordinateur, ou la démo en ligne.
 
 ## Pourquoi Arbora
 
-- **100 % local** : tes données restent sur ton appareil. Aucun serveur, aucun compte, aucune base de données chez un tiers.
-- **Décentralisé** : chacun garde son arbre, plutôt que de le confier à de grands centres de données.
-- **Léger et partageable** : un fichier HTML et des sauvegardes JSON de quelques centaines de Ko. Formats ouverts (GEDCOM).
-- **Respectueux de la vie privée** : pas de publicité, pas de pistage. Les personnes vivantes peuvent être masquées dans les copies partagées.
-- **Durable** : sans installation ni abonnement, lisible dans vingt ans.
+- **Tes données restent chez toi.** Rien n’est envoyé sur un serveur. Pas de publicité, pas de pistage, et tu peux protéger le fichier par mot de passe.
+- **Tout dans un fichier.** L’outil, l’arbre, les photos et les documents, en environ 1 Mo plus tes images.
+- **Complet.** Arbre, fiche, sablier, éventail, frise, carte, galerie, statistiques, vérifications, livre de famille en PDF.
+- **Ouvert.** Import et export GEDCOM et JSON, six langues, thème clair et sombre. Ton arbre n’est jamais enfermé.
+- **Durable.** Pas d’abonnement, pas d’installation. Le fichier s’ouvrira encore dans vingt ans.
 
-## Fonctions
+## Nouveau en 1.3.0
 
-- **Nouveau en 1.2.0** : livre de famille en PDF, parcours de vie avec une frise par personne, sources structurées avec fiabilité, numérotation Sosa et ancêtres communs, listes de recherches à faire, recherche avancée, calendrier de la famille (.ics), comparaison de deux fichiers, protection par mot de passe, parcours de vie sur la carte, raccourcis clavier.
-- Arbre interactif à disposition automatique, fiches détaillées (lecture ou édition), unions et divorces, photos et documents.
-- Suppression d’une personne ou d’une famille avec les conséquences expliquées avant. Outils de doublons et de boucles pour nettoyer l’arbre.
-- Vues ascendance, descendance, éventail, frise et carte, toutes filtrables.
-- Statistiques avec « Le saviez-vous ? », informations personnalisées pour chaque personne, analyse de lien de parenté.
-- Vérifications : dates impossibles, boucles, doublons, formats, avec des sources de recherche par pays.
-- Film de famille animé (une personne, un nom, tout l’arbre), exportable en vidéo.
-- Import GEDCOM et JSON avec fusion des doublons. Exports PDF, image, GEDCOM, JSON et copie partageable de l’outil (modifiable ou en lecture seule).
-- Partage d’une fiche (JSON ou PDF) ou d’une famille entière : à l’import, les personnes déjà présentes sont reconnues et la famille se rattache au bon endroit.
-- Historique des modifications gardé dans le fichier, avec un journal exportable.
+- **Vue Sablier** : les ancêtres à gauche et les descendants à droite d’une même personne.
+- **Galerie** de toutes les photos et de tous les documents, avec une planche contact en PDF.
+- **Témoins, parrains et marraines**, **liens d’adoption et de famille d’accueil**.
+- **Recherche dans tout le contenu**, **favoris**, **import CSV**, **calendrier républicain**, **repères historiques**.
+- **Fiche PDF personnalisable** : 8 palettes, 3 mises en page, police moderne ou classique, et le contenu de ton choix.
+- **Des vérifications qui guident** d’une remarque à l’autre, avec « Pourquoi ? » sur chacune.
+- **Arbre d’exemple** pour tout essayer sans risque, **allègement des images** avec un aperçu réel avant et après.
+- **Un fichier deux fois plus léger** : environ 1 Mo au lieu de 2,1 Mo, sans rien enlever.
+
+Détail complet dans le [CHANGELOG](CHANGELOG.md#français).
+
+## En images
+
+<table>
+  <tr><th width="50%">Clair</th><th width="50%">Sombre</th></tr>
+  <tr><td colspan="2"><b>Sablier</b> : ancêtres et descendants d’une même personne</td></tr>
+  <tr><td><img src="docs/fr/sablier-light.png" alt="Sablier, clair"></td><td><img src="docs/fr/sablier-dark.png" alt="Sablier, sombre"></td></tr>
+  <tr><td colspan="2"><b>Éventail</b> des ancêtres</td></tr>
+  <tr><td><img src="docs/fr/eventail-light.png" alt="Éventail, clair"></td><td><img src="docs/fr/eventail-dark.png" alt="Éventail, sombre"></td></tr>
+  <tr><td colspan="2"><b>Statistiques</b>, records et curiosités</td></tr>
+  <tr><td><img src="docs/fr/statistiques-light.png" alt="Statistiques, clair"></td><td><img src="docs/fr/statistiques-dark.png" alt="Statistiques, sombre"></td></tr>
+  <tr><td colspan="2"><b>Frise</b> des vies</td></tr>
+  <tr><td><img src="docs/fr/frise-light.png" alt="Frise, clair"></td><td><img src="docs/fr/frise-dark.png" alt="Frise, sombre"></td></tr>
+  <tr><td colspan="2"><b>Fiche en PDF</b>, personnalisable</td></tr>
+  <tr><td><img src="docs/fr/fiche-pdf-light.png" alt="Fiche PDF, clair"></td><td><img src="docs/fr/fiche-pdf-dark.png" alt="Fiche PDF, sombre"></td></tr>
+</table>
+
+<sub>Les captures utilisent une famille fictive.</sub>
+
+## Toutes les fonctions
+
+<details>
+<summary><b>Voir la liste complète</b></summary>
+
+- Arbre interactif à disposition automatique, fiches détaillées (lecture ou modification) avec des icônes par champ, unions et divorces, photos et documents, photos de la vie.
+- Vues ascendance, descendance, sablier (avec la numérotation d’Aboville), éventail, frise, carte et galerie.
+- Parcours de vie par personne (métier, études, déménagements…) avec l’âge à chaque étape et des repères historiques au choix.
+- Sources structurées avec fiabilité, témoins, parrains et marraines, liens d’adoption et de famille d’accueil.
+- Numérotation Sosa, ancêtres communs et complétude par génération.
+- Statistiques avec « Le saviez-vous ? », records et curiosités, un portrait pour chaque filtre, informations personnalisées, analyse de lien de parenté.
+- Vérifications : dates impossibles, boucles, doublons, formats, lieux à harmoniser, pistes de recherche par pays, progression dans le temps.
+- Livre de famille en PDF, fiche PDF d’une page personnalisable, planche contact de la galerie, exports image et GEDCOM.
+- Film de famille animé, exportable en vidéo.
+- Import GEDCOM, JSON et CSV, avec un choix clair entre fusionner et remplacer, et la fusion des doublons.
+- Partage d’une fiche ou d’une famille entière : à l’import, les personnes déjà présentes sont reconnues.
+- Copie partageable de l’outil (modifiable ou en lecture seule), personnes vivantes masquables.
+- Protection par mot de passe, historique des modifications gardé dans le fichier, journal exportable.
+- Calendrier de la famille (.ics), rappel « Aujourd’hui dans la famille », favoris, recherche avancée, raccourcis clavier (touche `?`).
+- Carte avec les parcours de vie et l’actualisation de tous les lieux en un clic.
+- Allègement des images avec un aperçu réel et les limites d’envoi (courriel, Discord).
 - Consignes prêtes à l’emploi pour améliorer l’arbre ou le démarrer avec une IA.
-- Six langues : français, anglais, espagnol, allemand, italien, portugais. Thème clair et sombre.
+- Six langues : français, anglais, espagnol, allemand, italien, portugais. Thème clair et sombre, thèmes de couleurs.
 
-| Fiche | Statistiques | Éventail |
-|---|---|---|
-| ![Fiche](docs/fr/fiche.png) | ![Statistiques](docs/fr/statistiques.png) | ![Éventail](docs/fr/eventail.png) |
-
-*Les captures utilisent une famille fictive.*
+</details>
 
 ## Mettre à jour
 
-À partir de la version 1.2.0, le bandeau de mise à jour propose **Mettre à jour en gardant mon arbre** : Arbora télécharge la nouvelle version, y place ton arbre et enregistre le fichier. Sinon, télécharge la nouvelle version, puis dans **Paramètres, Importer**, choisis **Mettre à jour depuis une ancienne copie** et sélectionne ton ancien fichier. Tu peux aussi importer ta dernière sauvegarde JSON.
+Le bandeau de mise à jour propose **Mettre à jour en gardant mon arbre** : Arbora télécharge la nouvelle version, y place ton arbre et enregistre le fichier. Sinon, télécharge la nouvelle version, puis dans **Paramètres, Importer**, choisis **Mettre à jour depuis une ancienne copie**. Tu peux aussi importer ta dernière sauvegarde JSON.
 
 ## À savoir
 
@@ -132,7 +257,7 @@ L’amélioration par une IA est la seule fonction qui fait sortir tes données 
 
 ## Signaler un problème ou proposer une idée
 
-Onglet **[Issues](https://github.com/florentdoug/arbora/issues/new/choose)**. Merci de ne jamais joindre de fichier contenant des données réelles de ta famille.
+Onglet **[Issues](https://github.com/florentdoug/arbora/issues/new/choose)** ou les **[Discussions](https://github.com/florentdoug/arbora/discussions)**. Merci de ne jamais joindre de fichier contenant des données réelles de ta famille.
 
 ## Soutenir Arbora
 

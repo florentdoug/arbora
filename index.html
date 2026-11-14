@@ -4,116 +4,212 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Arbora · L’arbre généalogique qui reste chez toi</title>
-<meta name="description" content="Arbora : un outil de généalogie complet dans un seul fichier HTML. Sans compte, sans serveur, hors ligne.">
+<meta name="description" content="Arbora : un outil de généalogie complet dans un seul fichier HTML. Sans compte, sans serveur, hors ligne. Gratuit et libre.">
+<meta property="og:title" content="Arbora · L’arbre généalogique qui reste chez toi">
+<meta property="og:description" content="Un outil de généalogie complet dans un seul fichier HTML. Sans compte, sans serveur, hors ligne.">
+<meta property="og:image" content="https://florentdoug.github.io/arbora/docs/social-preview.png">
+<link rel="icon" href="docs/logo.svg" type="image/svg+xml">
 <style>
-:root{--bg:#f4f6f8;--surface:#fff;--ink:#1c2631;--muted:#5b6672;--line:#d9e0e7;--accent:#2e6b5f;--accent2:#245549}
-@media (prefers-color-scheme:dark){:root{--bg:#12181d;--surface:#1b2329;--ink:#e6ebf0;--muted:#9aa6b2;--line:#2c3740;--accent:#6fbfac;--accent2:#8fd3c2}}
+:root{--bg:#f4f6f8;--bg2:#e9f1ee;--surface:#fff;--ink:#1c2631;--muted:#5b6672;--line:#d9e0e7;--accent:#2e6b5f;--accent2:#245549;--on:#fff;--m:#5b7fa8;--f:#b0646f;--shadow:0 20px 60px rgba(28,38,49,.16)}
+@media (prefers-color-scheme:dark){:root{--bg:#10161b;--bg2:#13221f;--surface:#1a2228;--ink:#e6ebf0;--muted:#9aa6b2;--line:#2c3740;--accent:#6fbfac;--accent2:#8fd3c2;--on:#0f201c;--shadow:0 20px 60px rgba(0,0,0,.45)}}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
 a{color:var(--accent)}
-.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
-header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
-.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:20px;color:var(--accent)}
-.lang{display:flex;gap:4px;border:1px solid var(--line);border-radius:999px;padding:3px;background:var(--surface)}
-.lang button{border:0;background:none;color:var(--muted);font:inherit;font-size:13px;font-weight:600;padding:4px 12px;border-radius:999px;cursor:pointer}
-.lang button.on{background:var(--accent);color:#fff}
-@media (prefers-color-scheme:dark){.lang button.on{color:#10201c}}
-.hero{text-align:center;padding:34px 0 26px}
-h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(30px,5vw,46px);line-height:1.15;margin:0 0 14px;text-wrap:balance}
-.lead{font-size:clamp(16px,2.2vw,19px);color:var(--muted);max-width:680px;margin:0 auto 26px;text-wrap:pretty}
+img{max-width:100%}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.serif{font-family:Georgia,"Times New Roman",serif}
+/* barre */
+header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid color-mix(in srgb,var(--line) 60%,transparent)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;height:62px}
+.brand{display:flex;align-items:center;gap:10px;font:700 21px Georgia,serif;color:var(--ink);text-decoration:none}
+.nav{display:flex;align-items:center;gap:18px;font-size:14.5px}
+.nav a{color:var(--muted);text-decoration:none}.nav a:hover{color:var(--ink)}
+.lang{display:flex;gap:2px;border:1px solid var(--line);border-radius:999px;padding:3px;background:var(--surface)}
+.lang button{border:0;background:none;color:var(--muted);font:inherit;font-size:13px;font-weight:600;padding:4px 11px;border-radius:999px;cursor:pointer}
+.lang button.on{background:var(--accent);color:var(--on)}
+/* héros */
+.hero{position:relative;overflow:hidden;background:radial-gradient(1100px 500px at 50% -10%,var(--bg2),transparent 70%)}
+.hero .wrap{text-align:center;padding:64px 20px 0}
+.hero .logo{width:92px;height:92px;margin:0 auto 18px;padding:16px;border-radius:26px;background:var(--surface);box-shadow:var(--shadow)}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:5px 12px 5px 6px;border-radius:999px;border:1px solid var(--line);background:var(--surface);font-size:13.5px;color:var(--muted);text-decoration:none;margin-bottom:18px}
+.pill b{background:var(--accent);color:var(--on);border-radius:999px;padding:1px 9px;font-size:12px}
+h1{font:700 clamp(34px,6vw,60px)/1.08 Georgia,"Times New Roman",serif;margin:0 0 18px;letter-spacing:-.5px;text-wrap:balance}
+h1 em{font-style:normal;color:var(--accent)}
+.lead{font-size:clamp(17px,2.3vw,20px);color:var(--muted);max-width:700px;margin:0 auto 30px;text-wrap:pretty}
 .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:12px;font-weight:700;font-size:18px;text-decoration:none;border:2px solid var(--accent)}
-.btn.primary{background:var(--accent);color:#fff;box-shadow:0 8px 24px rgba(46,107,95,.3)}
-.btn.primary:hover{background:var(--accent2);border-color:var(--accent2)}
-@media (prefers-color-scheme:dark){.btn.primary{color:#10201c}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 26px;border-radius:14px;font-weight:700;font-size:17px;text-decoration:none;border:2px solid var(--accent);transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.primary{background:var(--accent);color:var(--on);box-shadow:0 10px 28px color-mix(in srgb,var(--accent) 40%,transparent)}
 .btn.ghost{color:var(--accent);background:var(--surface)}
-.sub{margin:14px 0 0;font-size:13.5px;color:var(--muted)}
-.shot{margin:30px auto 0;border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 18px 50px rgba(0,0,0,.14);background:var(--surface)}
-.shot img{display:block;width:100%;height:auto}
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:38px 0 10px}
-.step{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px}
-.step b{display:flex;align-items:center;gap:10px;font-size:16px;margin-bottom:6px}
-.num{width:28px;height:28px;border-radius:50%;background:var(--accent);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:14px;flex:none}
-@media (prefers-color-scheme:dark){.num{color:#10201c}}
-.step p{margin:0;color:var(--muted);font-size:14.5px}
-h2{font-family:Georgia,serif;font-size:26px;margin:44px 0 16px;text-align:center}
-.feats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.feat{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:12px;padding:16px}
-.feat b{display:block;margin-bottom:4px}
-.feat span{color:var(--muted);font-size:14.5px}
-.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:8px}
-.gal figure{margin:0;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--surface)}
-.gal img{display:block;width:100%;height:auto}
-.gal figcaption{padding:8px 12px;font-size:13.5px;color:var(--muted)}
-.note{margin:26px auto 0;max-width:760px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 18px;font-size:14.5px;color:var(--muted)}
-footer{margin:46px 0 30px;padding-top:20px;border-top:1px solid var(--line);text-align:center;color:var(--muted);font-size:14px}
-footer a{margin:0 8px}
-@media (max-width:760px){.steps,.feats,.gal{grid-template-columns:1fr}.btn{width:100%;justify-content:center}}
+.sub{margin:16px 0 0;font-size:14px;color:var(--muted)}
+.duo{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:52px auto -1px;max-width:1080px}
+.duo figure{margin:0;border-radius:14px 14px 0 0;overflow:hidden;border:1px solid var(--line);border-bottom:0;box-shadow:var(--shadow);background:var(--surface)}
+.duo img{display:block;width:100%;height:auto}
+.duo figcaption,.pair figcaption{font-size:12.5px;font-weight:600;color:var(--muted);padding:7px 12px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:7px;text-align:left}
+.dot{width:10px;height:10px;border-radius:50%;border:1px solid var(--line);display:inline-block}.dot.l{background:#f4f6f8}.dot.d{background:#151b20}
+/* sections */
+section.band{padding:72px 0}
+section.alt{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+h2{font:700 clamp(26px,3.6vw,36px)/1.15 Georgia,serif;margin:0 0 10px;text-align:center;text-wrap:balance}
+.h2sub{text-align:center;color:var(--muted);max-width:640px;margin:0 auto 36px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px}
+.alt .step,.alt .feat{background:var(--bg)}
+.num{width:34px;height:34px;border-radius:11px;background:var(--accent);color:var(--on);display:inline-flex;align-items:center;justify-content:center;font-weight:700;margin-bottom:12px}
+.step b{display:block;font-size:17px;margin-bottom:4px}
+.step p,.feat p{margin:0;color:var(--muted);font-size:15px}
+.feats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.feat{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px}
+.ic{width:42px;height:42px;border-radius:12px;display:inline-flex;align-items:center;justify-content:center;margin-bottom:12px;background:color-mix(in srgb,var(--c,var(--accent)) 14%,transparent);color:var(--c,var(--accent))}
+.feat b{display:block;font-size:17px;margin-bottom:4px}
+/* galerie */
+.tabs{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-bottom:22px}
+.tabs button{border:1px solid var(--line);background:var(--surface);color:var(--muted);font:inherit;font-size:14.5px;font-weight:600;padding:8px 16px;border-radius:999px;cursor:pointer}
+.tabs button.on{background:var(--accent);border-color:var(--accent);color:var(--on)}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.pair figure{margin:0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--surface);box-shadow:0 10px 30px rgba(0,0,0,.08)}
+.pair img{display:block;width:100%;height:auto}
+.cap{text-align:center;color:var(--muted);margin:16px 0 0;font-size:15px}
+/* nouveautés */
+.news{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.new{border:1px solid var(--line);border-radius:14px;padding:16px;background:var(--bg)}
+.new b{display:block;margin-bottom:3px}
+.new span{color:var(--muted);font-size:14px}
+.more{text-align:center;margin-top:24px}
+/* bandeau final */
+.final{text-align:center;padding:76px 20px;background:radial-gradient(900px 400px at 50% 120%,var(--bg2),transparent 70%)}
+.final .logo{width:64px;height:64px;margin:0 auto 14px}
+.note{max-width:760px;margin:30px auto 0;color:var(--muted);font-size:14px;text-align:center}
+footer{padding:26px 0 34px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+footer nav{display:flex;flex-wrap:wrap;gap:16px}
+footer a{color:var(--muted)}
+@media (max-width:900px){.news{grid-template-columns:1fr 1fr}.nav .hide{display:none}}
+@media (max-width:760px){.steps,.feats{grid-template-columns:1fr}.duo,.pair{grid-template-columns:1fr}.duo figure+figure{display:none}.btn{width:100%}.hero .wrap{padding-top:40px}section.band{padding:52px 0}}
+@media (max-width:480px){.news{grid-template-columns:1fr}.nav a{display:none}}
 html[lang=fr] [data-l=en],html[lang=en] [data-l=fr]{display:none!important}
 </style>
 </head>
 <body>
-<div class="wrap">
-<header>
-  <div class="brand">
-    <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><path d="M16 9v6M8 21v-3h16v3M16 15v3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><rect x="11" y="2" width="10" height="7" rx="2.5" fill="currentColor"/><rect x="2" y="21" width="12" height="8" rx="2.5" fill="#6a8db5"/><rect x="18" y="21" width="12" height="8" rx="2.5" fill="#b67985"/></svg>
-    Arbora
-  </div>
-  <div class="lang" role="group" aria-label="Langue / Language"><button type="button" data-set="fr">Français</button><button type="button" data-set="en">English</button></div>
-</header>
+<header><div class="wrap bar">
+  <a class="brand" href="#"><svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><path d="M16 9v6M8 21v-3h16v3M16 15v3" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><rect x="11" y="2" width="10" height="7" rx="2.5" fill="var(--accent)"/><rect x="2" y="21" width="12" height="8" rx="2.5" fill="#5b7fa8"/><rect x="18" y="21" width="12" height="8" rx="2.5" fill="#b0646f"/></svg>Arbora</a>
+  <nav class="nav">
+    <a class="hide" href="#images"><span data-l="fr">En images</span><span data-l="en">In pictures</span></a>
+    <a class="hide" href="#nouveau"><span data-l="fr">Nouveautés</span><span data-l="en">What’s new</span></a>
+    <a href="https://github.com/florentdoug/arbora">GitHub</a>
+    <div class="lang" role="group" aria-label="Langue / Language"><button type="button" data-set="fr">FR</button><button type="button" data-set="en">EN</button></div>
+  </nav>
+</div></header>
 
-<section class="hero">
-  <h1><span data-l="fr">L’arbre généalogique qui reste chez toi</span><span data-l="en">The family tree that stays at home</span></h1>
-  <p class="lead"><span data-l="fr">Arbora est un outil de généalogie complet dans un seul fichier. Tu le télécharges, tu l’ouvres dans ton navigateur, et c’est tout : pas de compte, pas d’installation, pas d’internet nécessaire.</span><span data-l="en">Arbora is a complete genealogy tool in a single file. Download it, open it in your browser, and that’s it: no account, no installation, no internet needed.</span></p>
+<section class="hero"><div class="wrap">
+  <svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 9v6M8 21v-3h16v3M16 15v3" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><rect x="11" y="2" width="10" height="7" rx="2.5" fill="var(--accent)"/><rect x="2" y="21" width="12" height="8" rx="2.5" fill="#5b7fa8"/><rect x="18" y="21" width="12" height="8" rx="2.5" fill="#b0646f"/></svg>
+  <div><a class="pill" href="#nouveau"><b>1.3.0</b><span data-l="fr">Sablier, galerie, fiche PDF sur mesure, fichier 2× plus léger</span><span data-l="en">Hourglass, gallery, custom record PDF, file 2× lighter</span></a></div>
+  <h1><span data-l="fr">L’arbre généalogique<br>qui <em>reste chez toi</em></span><span data-l="en">The family tree<br>that <em>stays at home</em></span></h1>
+  <p class="lead"><span data-l="fr">Un outil de généalogie complet dans un seul fichier. Tu le télécharges, tu l’ouvres dans ton navigateur, et c’est parti. Pas de compte, pas d’installation, pas d’internet nécessaire.</span><span data-l="en">A complete genealogy tool in a single file. Download it, open it in your browser, and off you go. No account, no installation, no internet needed.</span></p>
   <div class="cta">
     <a class="btn primary" href="https://github.com/florentdoug/arbora/releases/latest/download/arbora.html" download>
       <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-5-5m5 5 5-5M5 21h14"/></svg>
       <span data-l="fr">Télécharger Arbora</span><span data-l="en">Download Arbora</span>
     </a>
-    <a class="btn ghost" href="demo.html"><span data-l="fr">Essayer la démo en ligne</span><span data-l="en">Try the online demo</span></a>
+    <a class="btn ghost" href="demo.html"><span data-l="fr">Essayer la démo</span><span data-l="en">Try the demo</span></a>
   </div>
-  <p class="sub"><span data-l="fr">Gratuit et libre · un fichier d’environ 2 Mo · Windows, Mac, Linux</span><span data-l="en">Free and open · one file of about 2 MB · Windows, Mac, Linux</span></p>
-  <div class="shot"><img data-l="fr" src="docs/fr/arbre-light.png" alt="Arbora, vue de l’arbre"><img data-l="en" src="docs/en/tree-light.png" alt="Arbora, tree view"></div>
+  <p class="sub"><span data-l="fr">Gratuit et libre · environ 1 Mo · Windows, Mac, Linux · 6 langues</span><span data-l="en">Free and open · about 1 MB · Windows, Mac, Linux · 6 languages</span></p>
+  <div class="duo">
+    <figure><figcaption><i class="dot l"></i><span data-l="fr">Thème clair</span><span data-l="en">Light theme</span></figcaption><img data-l="fr" src="docs/fr/arbre-light.png" alt="Arbora, arbre et fiche, thème clair"><img data-l="en" src="docs/en/tree-light.png" alt="Arbora, tree and record, light theme"></figure>
+    <figure><figcaption><i class="dot d"></i><span data-l="fr">Thème sombre</span><span data-l="en">Dark theme</span></figcaption><img data-l="fr" src="docs/fr/arbre-dark.png" alt="Arbora, arbre et fiche, thème sombre"><img data-l="en" src="docs/en/tree-dark.png" alt="Arbora, tree and record, dark theme"></figure>
+  </div>
+</div></section>
+
+<section class="band alt"><div class="wrap">
+  <h2><span data-l="fr">Prêt en une minute</span><span data-l="en">Ready in one minute</span></h2>
+  <p class="h2sub"><span data-l="fr">Rien à installer, rien à créer. Ton arbre vit dans le fichier.</span><span data-l="en">Nothing to install, nothing to sign up for. Your tree lives inside the file.</span></p>
+  <div class="steps">
+    <div class="step"><span class="num">1</span><b><span data-l="fr">Télécharge</span><span data-l="en">Download</span></b><p><span data-l="fr">Le fichier <code>arbora.html</code> arrive dans ton dossier Téléchargements.</span><span data-l="en">The <code>arbora.html</code> file lands in your Downloads folder.</span></p></div>
+    <div class="step"><span class="num">2</span><b><span data-l="fr">Ouvre</span><span data-l="en">Open</span></b><p><span data-l="fr">Un double clic, et il s’ouvre dans Chrome, Edge, Firefox ou Safari.</span><span data-l="en">One double click and it opens in Chrome, Edge, Firefox or Safari.</span></p></div>
+    <div class="step"><span class="num">3</span><b><span data-l="fr">Commence</span><span data-l="en">Start</span></b><p><span data-l="fr">Crée ta fiche, importe un GEDCOM (MyHeritage, Geneanet…), démarre avec une IA, ou explore l’arbre d’exemple.</span><span data-l="en">Create your record, import a GEDCOM (MyHeritage, Geneanet…), start with an AI, or explore the example tree.</span></p></div>
+  </div>
+</div></section>
+
+<section class="band" id="images"><div class="wrap">
+  <h2><span data-l="fr">En images, clair ou sombre</span><span data-l="en">In pictures, light or dark</span></h2>
+  <p class="h2sub"><span data-l="fr">Chaque vue existe en thème clair et sombre. Les captures montrent une famille fictive.</span><span data-l="en">Every view comes in a light and a dark theme. Screenshots show a fictional family.</span></p>
+  <div class="tabs" role="tablist" id="tabs"></div>
+  <div class="pair" id="pair"></div>
+  <p class="cap" id="cap"></p>
+</div></section>
+
+<section class="band alt"><div class="wrap">
+  <h2><span data-l="fr">Pourquoi Arbora</span><span data-l="en">Why Arbora</span></h2>
+  <p class="h2sub"><span data-l="fr">Ta famille n’a rien à faire dans le centre de données d’une entreprise.</span><span data-l="en">Your family has no business sitting in a company’s data centre.</span></p>
+  <div class="feats">
+    <div class="feat"><span class="ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span><b><span data-l="fr">Tes données restent chez toi</span><span data-l="en">Your data stays with you</span></b><p><span data-l="fr">Rien n’est envoyé sur un serveur. Pas de publicité, pas de pistage, et un mot de passe si tu veux.</span><span data-l="en">Nothing is sent to a server. No ads, no tracking, and a password if you want one.</span></p></div>
+    <div class="feat" style="--c:#5b7fa8"><span class="ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg></span><b><span data-l="fr">Tout dans un fichier</span><span data-l="en">Everything in one file</span></b><p><span data-l="fr">L’outil, l’arbre, les photos et les documents. Facile à sauvegarder et à envoyer à la famille.</span><span data-l="en">The tool, the tree, the photos and the documents. Easy to back up and send to family.</span></p></div>
+    <div class="feat" style="--c:#b0646f"><span class="ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span><b><span data-l="fr">Complet</span><span data-l="en">Complete</span></b><p><span data-l="fr">Arbre, sablier, éventail, frise, carte, galerie, statistiques, vérifications, livre de famille en PDF.</span><span data-l="en">Tree, hourglass, fan chart, timeline, map, gallery, statistics, checks, family book as PDF.</span></p></div>
+    <div class="feat" style="--c:#c08a2e"><span class="ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10M7 12h10M7 17h6"/><rect x="3" y="3" width="18" height="18" rx="3"/></svg></span><b><span data-l="fr">Ouvert</span><span data-l="en">Open</span></b><p><span data-l="fr">GEDCOM, JSON et CSV, 6 langues, logiciel libre. Ton arbre n’est jamais enfermé.</span><span data-l="en">GEDCOM, JSON and CSV, 6 languages, free software. Your tree is never locked in.</span></p></div>
+    <div class="feat" style="--c:#7a62b0"><span class="ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><b><span data-l="fr">Durable</span><span data-l="en">Durable</span></b><p><span data-l="fr">Pas d’abonnement. Le fichier s’ouvrira encore dans vingt ans, même sans internet.</span><span data-l="en">No subscription. The file will still open in twenty years, even offline.</span></p></div>
+    <div class="feat" style="--c:#3d9a6b"><span class="ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-2.6-6.4M21 4v5h-5"/></svg></span><b><span data-l="fr">À jour en un clic</span><span data-l="en">Updated in one click</span></b><p><span data-l="fr">Arbora te prévient d’une nouvelle version et se met à jour en gardant ton arbre.</span><span data-l="en">Arbora tells you about a new version and updates itself while keeping your tree.</span></p></div>
+  </div>
+</div></section>
+
+<section class="band" id="nouveau"><div class="wrap">
+  <h2><span data-l="fr">Nouveau dans la 1.3.0</span><span data-l="en">New in 1.3.0</span></h2>
+  <p class="h2sub"><span data-l="fr">La plus grosse version à ce jour, dans un fichier deux fois plus léger.</span><span data-l="en">The biggest release so far, in a file half the size.</span></p>
+  <div class="news">
+    <div class="new"><b><span data-l="fr">Vue Sablier</span><span data-l="en">Hourglass view</span></b><span data-l="fr">Ancêtres à gauche, descendants à droite.</span><span data-l="en">Ancestors left, descendants right.</span></div>
+    <div class="new"><b><span data-l="fr">Galerie</span><span data-l="en">Gallery</span></b><span data-l="fr">Toutes les photos et documents, planche contact en PDF.</span><span data-l="en">All photos and documents, contact sheet as PDF.</span></div>
+    <div class="new"><b><span data-l="fr">Fiche PDF sur mesure</span><span data-l="en">Custom record PDF</span></b><span data-l="fr">8 palettes, 3 mises en page, 2 polices.</span><span data-l="en">8 palettes, 3 layouts, 2 fonts.</span></div>
+    <div class="new"><b><span data-l="fr">Témoins et parrains</span><span data-l="en">Witnesses and godparents</span></b><span data-l="fr">Et les liens d’adoption ou d’accueil.</span><span data-l="en">And adoption or foster links.</span></div>
+    <div class="new"><b><span data-l="fr">Vérifications guidées</span><span data-l="en">Guided checks</span></b><span data-l="fr">« Corriger », « Suivante », « Pourquoi ? ».</span><span data-l="en">« Fix », « Next », « Why? ».</span></div>
+    <div class="new"><b><span data-l="fr">Recherche partout</span><span data-l="en">Search everywhere</span></b><span data-l="fr">Notes, sources, parcours, avec l’extrait trouvé.</span><span data-l="en">Notes, sources, journeys, with the excerpt.</span></div>
+    <div class="new"><b><span data-l="fr">Arbre d’exemple</span><span data-l="en">Example tree</span></b><span data-l="fr">Pour tout essayer sans risque.</span><span data-l="en">To try everything risk-free.</span></div>
+    <div class="new"><b><span data-l="fr">2× plus léger</span><span data-l="en">2× lighter</span></b><span data-l="fr">Environ 1 Mo, sans rien enlever.</span><span data-l="en">About 1 MB, nothing removed.</span></div>
+  </div>
+  <p class="more"><a href="https://github.com/florentdoug/arbora/blob/main/CHANGELOG.md"><span data-l="fr">Toutes les nouveautés</span><span data-l="en">Everything that’s new</span></a></p>
+</div></section>
+
+<section class="final">
+  <svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 9v6M8 21v-3h16v3M16 15v3" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><rect x="11" y="2" width="10" height="7" rx="2.5" fill="var(--accent)"/><rect x="2" y="21" width="12" height="8" rx="2.5" fill="#5b7fa8"/><rect x="18" y="21" width="12" height="8" rx="2.5" fill="#b0646f"/></svg>
+  <h2><span data-l="fr">Ton histoire de famille mérite un bel endroit</span><span data-l="en">Your family story deserves a good home</span></h2>
+  <p class="h2sub"><span data-l="fr">Gratuit, libre, et à toi pour toujours.</span><span data-l="en">Free, open, and yours forever.</span></p>
+  <div class="cta">
+    <a class="btn primary" href="https://github.com/florentdoug/arbora/releases/latest/download/arbora.html" download><span data-l="fr">Télécharger Arbora</span><span data-l="en">Download Arbora</span></a>
+    <a class="btn ghost" href="demo.html"><span data-l="fr">Essayer la démo</span><span data-l="en">Try the demo</span></a>
+  </div>
+  <p class="note"><span data-l="fr">Sur iPhone ou iPad, l’aperçu de fichier n’exécute pas l’outil : utilise un ordinateur, ou la démo en ligne pour découvrir Arbora.</span><span data-l="en">On iPhone or iPad, the file preview does not run the tool: use a computer, or the online demo to discover Arbora.</span></p>
 </section>
 
-<section class="steps">
-  <div class="step"><b><span class="num">1</span><span data-l="fr">Télécharge</span><span data-l="en">Download</span></b><p><span data-l="fr">Clique sur « Télécharger Arbora ». Le fichier <code>arbora.html</code> arrive dans ton dossier Téléchargements.</span><span data-l="en">Click “Download Arbora”. The <code>arbora.html</code> file lands in your Downloads folder.</span></p></div>
-  <div class="step"><b><span class="num">2</span><span data-l="fr">Ouvre</span><span data-l="en">Open</span></b><p><span data-l="fr">Double-clique dessus : il s’ouvre dans Chrome, Edge, Firefox ou Safari.</span><span data-l="en">Double-click it: it opens in Chrome, Edge, Firefox or Safari.</span></p></div>
-  <div class="step"><b><span class="num">3</span><span data-l="fr">Commence</span><span data-l="en">Start</span></b><p><span data-l="fr">Crée ta fiche, ou importe un fichier GEDCOM de MyHeritage ou Geneanet. Enregistre : ton arbre est dans le fichier.</span><span data-l="en">Create your record, or import a GEDCOM file from MyHeritage or Geneanet. Save: your tree is inside the file.</span></p></div>
-</section>
+<footer><div class="wrap">
+  <span><span data-l="fr">Conçu par florentdoug · licence GNU GPL v3</span><span data-l="en">Designed by florentdoug · GNU GPL v3 license</span></span>
+  <nav>
+    <a href="https://github.com/florentdoug/arbora"><span data-l="fr">Code source</span><span data-l="en">Source code</span></a>
+    <a href="https://github.com/florentdoug/arbora/releases"><span data-l="fr">Versions</span><span data-l="en">Releases</span></a>
+    <a href="https://github.com/florentdoug/arbora/discussions">Discussions</a>
+    <a href="https://ko-fi.com/florentdoug"><span data-l="fr">Offrir un café</span><span data-l="en">Buy me a coffee</span></a>
+  </nav>
+</div></footer>
 
-<h2><span data-l="fr">Pourquoi Arbora</span><span data-l="en">Why Arbora</span></h2>
-<section class="feats">
-  <div class="feat"><b><span data-l="fr">Tes données restent chez toi</span><span data-l="en">Your data stays with you</span></b><span><span data-l="fr">Rien n’est envoyé sur un serveur. Pas de publicité, pas de suivi. Tu peux même protéger le fichier par mot de passe.</span><span data-l="en">Nothing is sent to a server. No ads, no tracking. You can even protect the file with a password.</span></span></div>
-  <div class="feat"><b><span data-l="fr">Tout dans un fichier</span><span data-l="en">Everything in one file</span></b><span><span data-l="fr">L’outil, l’arbre, les photos et les documents. Facile à sauvegarder et à envoyer à la famille.</span><span data-l="en">The tool, the tree, the photos and the documents. Easy to back up and send to family.</span></span></div>
-  <div class="feat"><b><span data-l="fr">Complet</span><span data-l="en">Complete</span></b><span><span data-l="fr">Arbre interactif, ascendance, éventail, frise, carte, statistiques, vérifications, livre de famille en PDF.</span><span data-l="en">Interactive tree, ancestors, fan chart, timeline, map, statistics, checks, family book as PDF.</span></span></div>
-  <div class="feat"><b><span data-l="fr">Ouvert</span><span data-l="en">Open</span></b><span><span data-l="fr">Import et export GEDCOM, sauvegardes JSON, 6 langues. Ton arbre n’est jamais enfermé.</span><span data-l="en">GEDCOM import and export, JSON backups, 6 languages. Your tree is never locked in.</span></span></div>
-  <div class="feat"><b><span data-l="fr">Durable</span><span data-l="en">Durable</span></b><span><span data-l="fr">Pas d’abonnement. Le fichier s’ouvrira encore dans vingt ans, même sans internet.</span><span data-l="en">No subscription. The file will still open in twenty years, even without internet.</span></span></div>
-  <div class="feat"><b><span data-l="fr">À jour simplement</span><span data-l="en">Simple updates</span></b><span><span data-l="fr">Arbora te prévient d’une nouvelle version et se met à jour en gardant ton arbre.</span><span data-l="en">Arbora tells you about a new version and updates itself while keeping your tree.</span></span></div>
-</section>
-
-<h2><span data-l="fr">En images</span><span data-l="en">In pictures</span></h2>
-<section class="gal">
-  <figure><img data-l="fr" src="docs/fr/fiche.png" alt=""><img data-l="en" src="docs/en/record.png" alt=""><figcaption><span data-l="fr">La fiche d’une personne</span><span data-l="en">A person’s record</span></figcaption></figure>
-  <figure><img data-l="fr" src="docs/fr/eventail.png" alt=""><img data-l="en" src="docs/en/fan-chart.png" alt=""><figcaption><span data-l="fr">L’éventail des ancêtres</span><span data-l="en">The ancestor fan chart</span></figcaption></figure>
-  <figure><img data-l="fr" src="docs/fr/statistiques.png" alt=""><img data-l="en" src="docs/en/statistics.png" alt=""><figcaption><span data-l="fr">Les statistiques</span><span data-l="en">Statistics</span></figcaption></figure>
-</section>
-
-<p class="note"><span data-l="fr">Sur iPhone ou iPad, l’aperçu de fichier n’exécute pas l’outil. Utilise un ordinateur, ou la démo en ligne pour découvrir Arbora. Les captures montrent une famille fictive.</span><span data-l="en">On iPhone or iPad, the file preview does not run the tool. Use a computer, or the online demo to discover Arbora. Screenshots show a fictional family.</span></p>
-
-<footer>
-  <a href="https://github.com/florentdoug/arbora"><span data-l="fr">Code source</span><span data-l="en">Source code</span></a>
-  <a href="https://github.com/florentdoug/arbora/blob/main/CHANGELOG.md"><span data-l="fr">Nouveautés</span><span data-l="en">What’s new</span></a>
-  <a href="https://github.com/florentdoug/arbora/discussions"><span data-l="fr">Discussions</span><span data-l="en">Discussions</span></a>
-  <a href="https://ko-fi.com/florentdoug"><span data-l="fr">Offrir un café</span><span data-l="en">Buy me a coffee</span></a>
-  <p><span data-l="fr">Conçu par florentdoug</span><span data-l="en">Designed by florentdoug</span></p>
-</footer>
-</div>
 <script>
-(function(){var l="fr";try{l=localStorage.getItem("arbora-site-lang")||(/^fr/i.test(navigator.language||"")?"fr":"en")}catch(e){}
-  var set=function(v){document.documentElement.lang=v;document.querySelectorAll(".lang button").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-set")===v)});
-    document.title=v==="fr"?"Arbora · L’arbre généalogique qui reste chez toi":"Arbora · The family tree that stays at home";try{localStorage.setItem("arbora-site-lang",v)}catch(e){}};
-  document.querySelectorAll(".lang button").forEach(function(b){b.onclick=function(){set(b.getAttribute("data-set"))}});set(l)})();
+(function(){
+  var V=[
+    {fr:["Arbre et fiche","arbre","L’arbre interactif et la fiche d’une personne, avec son parcours de vie."],en:["Tree and record","tree","The interactive tree and a person’s record, with their life journey."]},
+    {fr:["Sablier","sablier","Les ancêtres à gauche, les descendants à droite d’une même personne."],en:["Hourglass","hourglass","The ancestors on the left, the descendants on the right of one person."]},
+    {fr:["Éventail","eventail","L’éventail des ancêtres, côté père et côté mère."],en:["Fan chart","fan-chart","The ancestor fan, father’s side and mother’s side."]},
+    {fr:["Statistiques","statistiques","Le saviez-vous, records et curiosités de la famille."],en:["Statistics","statistics","Did you know, family records and curiosities."]},
+    {fr:["Frise","frise","Toutes les vies sur une même frise chronologique."],en:["Timeline","timeline","Every life on one timeline."]},
+    {fr:["Fiche PDF","fiche-pdf","La fiche d’une page en PDF, avec les couleurs et le contenu de ton choix."],en:["Record PDF","record-pdf","The one-page record as PDF, with the colours and content of your choice."]}
+  ],cur=0,lang="fr";
+  var tabs=document.getElementById("tabs"),pair=document.getElementById("pair"),cap=document.getElementById("cap");
+  var draw=function(){var v=V[cur][lang],d=lang==="fr"?"fr":"en";
+    tabs.innerHTML=V.map(function(x,i){return '<button type="button" role="tab" aria-selected="'+(i===cur)+'" class="'+(i===cur?"on":"")+'" data-i="'+i+'">'+x[lang][0]+'</button>'}).join("");
+    var L=lang==="fr"?["Thème clair","Thème sombre"]:["Light theme","Dark theme"];
+    pair.innerHTML=["light","dark"].map(function(t,j){return '<figure><figcaption><i class="dot '+(j?"d":"l")+'"></i>'+L[j]+'</figcaption><img loading="lazy" src="docs/'+d+'/'+v[1]+'-'+t+'.png" alt="'+v[0]+', '+L[j]+'"></figure>'}).join("");
+    cap.textContent=v[2]};
+  tabs.addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;cur=+b.getAttribute("data-i");draw()});
+  try{lang=localStorage.getItem("arbora-site-lang")||(/^fr/i.test(navigator.language||"")?"fr":"en")}catch(e){lang=/^fr/i.test(navigator.language||"")?"fr":"en"}
+  var set=function(v){lang=v;document.documentElement.lang=v;document.querySelectorAll(".lang button").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-set")===v)});
+    document.title=v==="fr"?"Arbora · L’arbre généalogique qui reste chez toi":"Arbora · The family tree that stays at home";try{localStorage.setItem("arbora-site-lang",v)}catch(e){}draw()};
+  document.querySelectorAll(".lang button").forEach(function(b){b.onclick=function(){set(b.getAttribute("data-set"))}});set(lang)})();
 </script>
 </body>
 </html>

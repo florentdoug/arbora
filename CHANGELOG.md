@@ -4,6 +4,59 @@
 
 All notable changes to Arbora. Version numbers follow major.minor.patch: a new feature bumps the second number, a fix bumps the third.
 
+## [1.3.0] - 2026-11-13
+
+### Added
+- **Hourglass view**: the ancestors on the left and the descendants on the right of one person, with the same boxes, zoom and exports (PDF, PNG, SVG) as the Ancestors and Descendants views.
+- **Gallery**: all the photos (record photos, life photos) and documents of the tree in one view, filtered by type, by name and by branch (whole tree, ancestors or descendants of the selected person). A click opens the person's record, the magnifier shows the image or opens the document.
+- **Witnesses and godparents**: people linked to a birth, baptism, death or marriage (witness, godfather, godmother, informant, officiant). They are shown in both records, kept when merging duplicates, removed when the person is deleted, printed in the record PDF and exported to GEDCOM (ASSO).
+- **Typed parent links**: adoption or foster family, chosen in the Parents section, drawn as a dotted line in the tree (with a legend entry), shown on the parent and child cards, in the record PDF and in GEDCOM (PEDI, import and export).
+- **« Today in the family »**: on opening, a discreet reminder of today's birthdays and anniversaries and of the coming week, once a day. It can be turned off (and back on from the family calendar).
+- Keyboard shortcuts `1` to `9` and `0` for the ten views.
+- **Search across all content**: the search box now also looks in notes, sources, life journey, residences, baptism, marriages, research to do and document names, and shows the matching excerpt under the name.
+- **Favourites**: a bookmark next to « Record » marks a record, a button near the search box (and an entry in the gear menu) lists the favourites. They are saved in the file.
+- **CSV table import**: one line per person (names, sex, birth, death, places, occupation, notes) with father, mother and spouse columns to link the lines. Column names are recognised in the 6 languages, a template can be downloaded, and the import goes through the usual analysis with duplicate detection.
+- **French Republican calendar**: a date such as « 18 brumaire an VIII » typed in a date field is converted to the Gregorian date, and the Republican equivalent is shown under dates between 22 September 1792 and 31 December 1805. Also accepted in the CSV import.
+- **Historical landmarks** in the life journey, as an option (world wars, 1929 crash, first steps on the Moon…), with the person's age at each one.
+- **Gallery contact sheet as PDF**: the filtered gallery on A4 pages, 4 tiles per row, with names and captions.
+- **Hourglass**: Sosa numbers in the ancestor boxes and the « Sosa » button, as in the Ancestors view.
+- **Family book**: witnesses, godparents and the parent link type (adoption, foster) are printed in each entry.
+- **GEDCOM**: witnesses and godparents are read back on import (ASSO), and marriage witnesses are exported.
+- About: a « Check for updates » button next to the download button.
+- **Statistics**: a new « Records and curiosities » chapter (largest sibling group, longest union, old age, most common occupations, great travellers with distances, distance travelled between all known places, twins, wedding months), and a « Portrait of the group » that adapts to each filter: first known bearer and cradle for a surname or a branch, life milestones, infant mortality, causes and decades of death for a century, a generation, a sex or a status, relatives counts for a person.
+- **Hourglass**: d’Aboville numbering of descendants (1.2 is the 2nd child, 1.2.1 their first child), mirroring the Sosa numbers of ancestors.
+- **Checks that guide you**: clicking a name opens the record with a banner « Remark 3 of 40 » and the buttons Fix (opens the right field in edit mode), Previous and Next; a « Why? » under each remark explains it in plain words; a remark can be ignored with a reason and restored at the bottom of the tab; the tree health score keeps its history, with the change since last week and a small curve.
+- **New checks**: baptism before birth, residence or life event outside the person's life, witness or godparent not alive at the event, two living children with the same first name, birth more than 10 months after the father's death (full dates), and **places to harmonise** (the same place written in several ways, fixed in one click).
+- **Record PDF layouts**: Classic, Banner (full-width coloured header) or Cards (each part in a card on a tinted background), chosen in the preview next to light/dark, photo shape and life journey. The header is as high as the photo, with the text block and the photo centred vertically and the Sosa number next to « Record ».
+- **Customisable record PDF**: in the preview, an « Appearance » row (8 colour palettes or your own theme, layout, light or dark, modern or classic serif font) and a « Content » row (photo round, square or none, life photos, life journey, Sosa number, and the parts Family, Witnesses, Notes and sources, Personal facts). Choices are remembered and the record always fits on one page.
+- **Import**: before choosing the file, two clear cards « Merge with my tree » and « Replace my tree », with an explanation; the chosen mode is shown at the top of the import window and preselected in the analysis.
+- **Example tree**: on the welcome screen, « Try with an example tree » opens a small fictional family (15 people) to test everything. Nothing is saved, a banner offers « Start my tree » or « Leave the example ».
+- **Field icons** in the record, in read and edit mode, to find each piece of information at a glance.
+- **Life photos in the record PDF** are linked by arrows to show the evolution, and the space for captions is only reserved when there is one.
+- **Lighten images**: real preview on the largest image of each group (before and after at the same scale, detail at 100 % or whole image, with dimensions and weight), updated at every size or quality change, and a clear note on what is never changed (non-image documents, web-linked images, GIF and SVG, images already smaller than the chosen size)). You can pick the image to preview, move around in it, and see the sending limits (Outlook, Gmail, Yahoo, Proton Mail attachments with encoding included, Discord) turn from a red cross to a green tick.
+- **Map**: « Relocate all places » becomes « Refresh all places » and looks up several places at once (much faster), skipping places already up to date unless asked. A « Locate the N places » button above the places to locate replaces clicking « Search » then « Confirm » for each one. The example tree opens with its places already on the map.
+
+### Changed
+- The tab bar stays on one line on common screen widths: the save status is shortened instead of wrapping.
+- Phones: the save button is an icon (a disk when there are changes, a tick when everything is saved) instead of a shortened label.
+- **Record panel**: all parts share the same foldable title and left edge (life journey, witnesses, sources, research to do, documents), spacing is tighter in edit and read mode, residences are shown as text with the period aligned right, and the header shows « Record » above the name with one row of chips (Sosa, favourite, personal information).
+- **Checks**: tree health takes 2/3 of the width and « Where to search » 1/3, and both appear at the same time.
+- **File half the size** (about 1 MB instead of 2.1 MB for 1.2.0): the code is minified and stored compressed (lossless, checked byte for byte at each build), with a small embedded decompressor (fflate, MIT licence). Nothing is removed from the tool.
+- Exporting a record now offers PDF first and by default.
+- Closing a record that is being edited asks whether to save the changes, discard them or go back to the record.
+- The credit band of exported images (SVG and PNG) is centred, in the colours of the chosen look, with the logo next to the text; the second credit drawn inside the image is gone.
+- Statistics tiles have their own colour and icon, and « Group members » shows one line per person.
+- Record in read mode: birth, baptism and death are compact tiles that are always visible; baptism and death only appear when there is information, and the death tile no longer shows the « Deceased » box (« Deceased (date unknown) » when there is no date). The life journey uses the same icons and colours for these three events.
+- Lightening images: the weight shown is the real weight in the file, photos (record and life photos) and documents are handled separately (1,024 px and 1,600 px by default), with a choice of size and quality, and an explanation when a size brings no gain.
+- « Save the blank tool » suggests the name Arbora_1.3.0.html.
+
+### Fixed
+- Record PDF: the « Photo: round or square » choice had disappeared from the preview in 1.2.0.
+- Mobile: the page no longer overflows sideways by a few pixels in languages with a long « Saved » label.
+- Build: the build now refuses to complete when two modules declare the same internal name (the cause of both regressions found in 1.2.0), and a single command runs all test suites, including the minified file.
+- Map: switching quickly from the Map tab to another tab could show the error « Cannot read properties of undefined (reading '_leaflet_pos') ».
+- Exported views could keep boxes half transparent when the export was started while the view was still appearing.
+
 ## [1.2.0] - 2026-11-11
 
 ### Added
@@ -139,6 +192,59 @@ First public release.
 [English](#changelog--journal-des-versions) · **Français**
 
 Toutes les évolutions notables d’Arbora. Les numéros suivent le format majeur.mineur.correctif : une nouveauté fait monter le deuxième chiffre, une correction le troisième.
+
+## [1.3.0] - 2026-11-13
+
+### Nouveautés
+- **Vue Sablier** : les ancêtres à gauche et les descendants à droite d’une même personne, avec les mêmes cases, le même zoom et les mêmes exports (PDF, PNG, SVG) que les vues Ascendance et Descendance.
+- **Galerie** : toutes les photos (photos de fiche, photos de la vie) et tous les documents de l’arbre dans une vue, filtrables par type, par nom et par branche (tout l’arbre, ascendance ou descendance de la personne sélectionnée). Un clic ouvre la fiche de la personne, la loupe affiche l’image ou ouvre le document.
+- **Témoins, parrains et marraines** : des personnes liées à une naissance, un baptême, un décès ou un mariage (témoin, parrain, marraine, déclarant, officiant). Elles apparaissent dans les deux fiches, sont conservées à la fusion de doublons, retirées si la personne est supprimée, imprimées dans la fiche PDF et exportées en GEDCOM (ASSO).
+- **Filiation typée** : adoption ou famille d’accueil, à choisir dans la partie Parents, dessinée en pointillés dans l’arbre (avec une entrée de légende), affichée sur les cartes des parents et des enfants, dans la fiche PDF et en GEDCOM (PEDI, import et export).
+- **« Aujourd’hui dans la famille »** : à l’ouverture, un rappel discret des anniversaires du jour et de la semaine à venir, une fois par jour. Il se désactive (et se réactive depuis le calendrier de la famille).
+- Raccourcis clavier `1` à `9` et `0` pour les dix vues.
+- **Recherche dans tout le contenu** : la barre de recherche regarde aussi les notes, les sources, le parcours de vie, les résidences, le baptême, les mariages, les recherches à faire et les noms des documents, et affiche l’extrait trouvé sous le nom.
+- **Favoris** : un signet à côté de « Fiche » marque une fiche, un bouton près de la recherche (et une entrée du menu engrenage) liste les favoris. Ils sont enregistrés dans le fichier.
+- **Import d’un tableau CSV** : une ligne par personne (noms, sexe, naissance, décès, lieux, profession, notes) avec des colonnes père, mère et conjoint pour relier les lignes. Les noms de colonnes sont reconnus dans les 6 langues, un modèle se télécharge, et l’import passe par l’analyse habituelle avec repérage des doublons.
+- **Calendrier républicain** : une date comme « 18 brumaire an VIII » saisie dans un champ de date est convertie en date grégorienne, et l’équivalent républicain s’affiche sous les dates comprises entre le 22 septembre 1792 et le 31 décembre 1805. Accepté aussi dans l’import CSV.
+- **Repères historiques** dans le parcours de vie, au choix (guerres mondiales, krach de 1929, premiers pas sur la Lune…), avec l’âge de la personne à chacun.
+- **Planche contact de la galerie en PDF** : la galerie filtrée sur des pages A4, 4 vignettes par ligne, avec noms et légendes.
+- **Sablier** : numéros Sosa dans les cases des ancêtres et bouton « Sosa », comme dans la vue Ascendance.
+- **Livre de famille** : les témoins, parrains, marraines et le type de filiation (adoption, accueil) sont imprimés dans chaque notice.
+- **GEDCOM** : les témoins, parrains et marraines sont relus à l’import (ASSO), et les témoins de mariage sont exportés.
+- À propos : un bouton « Vérifier les mises à jour » à côté du bouton de téléchargement.
+- **Statistiques** : nouveau chapitre « Records et curiosités » (plus grande fratrie, plus longue union, grand âge, métiers les plus fréquents, grands voyageurs avec les distances, kilomètres parcourus entre tous les lieux connus, jumeaux, mois des mariages), et un « Portrait du groupe » qui s’adapte à chaque filtre : premier porteur connu et berceau pour un nom ou une branche, âges de la vie, mortalité infantile, causes et décennies des décès pour un siècle, une génération, un sexe ou un statut, nombre de proches pour une personne.
+- **Sablier** : numérotation d’Aboville des descendants (1.2 est le 2e enfant, 1.2.1 son premier enfant), en miroir des numéros Sosa des ancêtres.
+- **Des vérifications qui guident** : cliquer sur un nom ouvre la fiche avec un bandeau « Remarque 3 sur 40 » et les boutons Corriger (ouvre le bon champ en modification), Précédente et Suivante ; un « Pourquoi ? » sous chaque remarque l’explique simplement ; une remarque peut être ignorée avec une raison et rétablie en bas de l’onglet ; le score de santé de l’arbre garde son historique, avec l’évolution depuis la semaine précédente et une petite courbe.
+- **Nouveaux contrôles** : baptême avant la naissance, résidence ou événement hors de la vie de la personne, témoin ou parrain qui n’est pas en vie à l’événement, deux enfants vivants du même prénom, naissance plus de 10 mois après le décès du père (dates complètes), et **lieux à harmoniser** (le même lieu écrit de plusieurs façons, corrigé en un clic).
+- **Mises en page de la fiche PDF** : Classique, Bandeau (en-tête de couleur pleine largeur) ou Carnet (chaque partie dans une carte sur fond teinté), au choix dans l’aperçu, à côté du rendu clair ou sombre, de la forme de la photo et du parcours de vie. L’en-tête a la hauteur de la photo, avec le texte et la photo centrés verticalement et le numéro Sosa à côté de « Fiche ».
+- **Fiche PDF personnalisable** : dans l’aperçu, une ligne « Apparence » (8 palettes de couleurs ou ton propre thème, mise en page, clair ou sombre, police moderne ou classique avec empattement) et une ligne « Contenu » (photo ronde, carrée ou aucune, photos de la vie, parcours de vie, numéro Sosa, et les parties Famille, Témoins, Notes et sources, Informations personnalisées). Les choix sont mémorisés et la fiche tient toujours sur une page.
+- **Importer** : avant de choisir le fichier, deux cartes claires « Fusionner avec mon arbre » et « Remplacer mon arbre », avec une explication ; le mode choisi s’affiche en haut de la fenêtre d’import et il est présélectionné dans l’analyse.
+- **Arbre d’exemple** : sur l’écran d’accueil, « Essayer avec un arbre d’exemple » ouvre une petite famille fictive (15 personnes) pour tout tester. Rien n’est enregistré, un bandeau propose « Commencer mon arbre » ou « Quitter l’exemple ».
+- **Icônes des champs** dans la fiche, en lecture comme en modification, pour repérer chaque information d’un coup d’œil.
+- **Photos de la vie dans la fiche PDF** reliées par des flèches pour montrer l’évolution, et l’espace des légendes n’est réservé que s’il y en a.
+- **Alléger les images** : aperçu réel sur la plus grande image de chaque groupe (avant et après à la même échelle, détail à 100 % ou image entière, avec dimensions et poids), mis à jour à chaque changement de taille ou de qualité, et une note claire sur ce qui n’est jamais modifié (documents qui ne sont pas des images, images en lien web, GIF et SVG, images déjà plus petites que la taille choisie)). On peut choisir l’image à prévisualiser, se déplacer dedans, et voir les limites d’envoi (pièces jointes Outlook, Gmail, Yahoo, Proton Mail encodage compris, Discord) passer de la croix rouge à la coche verte.
+- **Carte** : « Relocaliser tous les lieux » devient « Actualiser tous les lieux » et cherche plusieurs lieux en même temps (beaucoup plus rapide), en sautant les lieux déjà à jour sauf demande. Un bouton « Localiser les N lieux » au-dessus des lieux à localiser remplace « Chercher » puis « Valider » pour chacun. L’arbre d’exemple s’ouvre avec ses lieux déjà sur la carte.
+
+### Changements
+- La barre d’onglets reste sur une ligne sur les largeurs d’écran courantes : l’état d’enregistrement est raccourci au lieu de passer à la ligne.
+- Téléphone : le bouton d’enregistrement est une icône (une disquette quand il y a des modifications, une coche quand tout est enregistré) au lieu d’un libellé tronqué.
+- **Fiche** : toutes les parties partagent le même titre repliable et le même bord gauche (parcours de vie, témoins, sources, recherches à faire, documents), les espacements sont resserrés en modification et en lecture, les résidences s’affichent en texte avec la période alignée à droite, et l’en-tête montre « Fiche » au-dessus du nom avec une rangée de pastilles (Sosa, favori, informations personnalisées).
+- **Vérifications** : la santé de l’arbre occupe 2/3 de la largeur et « Où chercher » 1/3, et les deux apparaissent en même temps.
+- **Fichier deux fois plus léger** (environ 1 Mo au lieu de 2,1 Mo pour la 1.2.0) : le code est minifié et stocké compressé (sans perte, vérifié octet par octet à chaque construction), avec un petit décompresseur intégré (fflate, licence MIT). Rien n’est retiré de l’outil.
+- Exporter une fiche propose maintenant le PDF en premier et par défaut.
+- Fermer une fiche en cours de modification demande s’il faut enregistrer les modifications, les ignorer ou revenir à la fiche.
+- Le bandeau de crédit des images exportées (SVG et PNG) est centré, aux couleurs du rendu choisi, avec le logo collé au texte ; le second crédit dessiné dans l’image a disparu.
+- Les tuiles de statistiques ont chacune leur couleur et leur icône, et « Membres du groupe » tient sur une ligne par personne.
+- Fiche en lecture : naissance, baptême et décès sont des tuiles compactes toujours visibles ; baptême et décès n’apparaissent que s’il y a une information, et la tuile Décès n’affiche plus la case « Décédé » (« Décédé (date inconnue) » s’il n’y a pas de date). Le parcours de vie reprend les mêmes icônes et couleurs pour ces trois événements.
+- Alléger les images : le poids affiché est le poids réel dans le fichier, les photos (de fiche et de la vie) et les documents sont traités à part (1 024 px et 1 600 px par défaut), avec le choix de la taille et de la qualité, et une explication quand une taille ne fait rien gagner.
+- « Enregistrer l’outil vierge » propose le nom Arbora_1.3.0.html.
+
+### Corrections
+- Fiche PDF : le choix « Photo : ronde ou carrée » avait disparu de l’aperçu dans la 1.2.0.
+- Mobile : la page ne déborde plus de quelques pixels sur le côté dans les langues où « Enregistré » est long.
+- Construction : elle refuse désormais d’aboutir si deux modules déclarent le même nom interne (la cause des deux régressions trouvées dans la 1.2.0), et une seule commande lance toutes les suites de tests, fichier minifié compris.
+- Carte : passer vite de l’onglet Carte à un autre onglet pouvait afficher l’erreur « Cannot read properties of undefined (reading '_leaflet_pos') ».
+- Une vue exportée pendant son animation d’apparition pouvait garder des cases à moitié transparentes.
 
 ## [1.2.0] - 2026-11-11
 
