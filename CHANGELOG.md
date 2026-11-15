@@ -4,6 +4,32 @@
 
 All notable changes to Arbora. Version numbers follow major.minor.patch: a new feature bumps the second number, a fix bumps the third.
 
+## [1.5.0] - 2026-11-15
+
+### Added
+- **Residences with start and end years**: two 4-digit year fields per residence, an optional « Detail » kept from old entries, and a « Sort by date » button (from oldest to most recent, still adjustable by hand afterwards).
+- **Checks: old residence periods converted** (« 2007-2012 » becomes start 2007, end 2012), one by one or all at once. Details such as an address or a month are kept, approximate periods are flagged.
+- **AI: research the history of a surname**: origin, variants, geographic spread, bearers already in the tree and archive leads, each fact with its source. Leads come back into « Research to do ».
+- **AI: advice on each assistant's deep research mode** and an explanation of the sources it consults, valid worldwide, with their limits.
+- **Gallery**: click an image for a preview, with « Open full size in a new tab ». Click the name to open the record.
+- **After « Update and keep my tree »**: a window explains that the tree moved to the new version, with « Close the tool », « Redo the update » and « Close this message ».
+
+### Changed
+- **Checks redesigned**: tree health first, « My research to do » folded just below, « Quick wins » with 3 one-click fixes, coloured tiles per category with a progress bar, congratulations when a category is done, international sources first.
+- **Export redesigned like Import**: first choose the type (a view of the tool, documents and reports, save the data, share), then the options. The views follow the order of the tabs. Contact sheet, places report and checks report are always available.
+- **Smoother mouse wheel zoom** on the tree (wheel steps grouped per frame), and the **Map opens faster** (the person list is built on first use).
+- **Guided tour fully redone for beginners**: header, every tab, the tree, the record, saving and help, in 33 short steps.
+- **New welcome screen**: Arbora logo at the top and a glowing « Discover the tool in 2 minutes » button.
+- Looping animations above the tree have been stopped.
+- **Contact sheet**: full names under each picture, on two lines if needed.
+- **Update and keep my tree**: the suggested file name follows the save format (Arbora_tree name_DD-MM-YYYY_HH-MM.html), and the window explains that the browser cannot close the old version or open the new one by itself.
+- **AI instructions**: residences with start and end years, sources named generically for every country.
+- Browser tab title: « Arbora | tree name ».
+
+### Fixed
+- The « changes only kept in this browser » reminder now disappears as soon as the file is saved.
+- Checks no longer suggest a « correction » identical to the current value.
+
 ## [1.4.0] - 2026-11-15
 
 ### Added
@@ -217,6 +243,32 @@ First public release.
 [English](#changelog--journal-des-versions) · **Français**
 
 Toutes les évolutions notables d’Arbora. Les numéros suivent le format majeur.mineur.correctif : une nouveauté fait monter le deuxième chiffre, une correction le troisième.
+
+## [1.5.0] - 2026-11-15
+
+### Ajouts
+- **Résidences avec année de début et de fin** : deux champs d’année sur 4 chiffres par résidence, une « Précision » facultative gardée depuis les anciennes saisies, et un bouton « Trier par date » (de la plus ancienne à la plus récente, ajustable à la main ensuite).
+- **Vérifications : conversion des anciennes périodes de résidence** (« 2007-2012 » devient début 2007, fin 2012), une par une ou toutes d’un coup. Les précisions comme une adresse ou un mois sont gardées, les périodes approximatives sont signalées.
+- **IA : rechercher l’histoire d’un nom de famille** : origine, variantes, répartition géographique, porteurs déjà dans l’arbre et pistes d’archives, chaque fait avec sa source. Les pistes reviennent dans « Recherches à faire ».
+- **IA : conseil sur le mode de recherche approfondie** de chaque assistant, et explication des sources consultées, valable dans le monde entier, avec leurs limites.
+- **Galerie** : clic sur une image pour l’aperçu, avec « Ouvrir en taille réelle dans un nouvel onglet ». Clic sur le nom pour ouvrir la fiche.
+- **Après « Mettre à jour en gardant mon arbre »** : une fenêtre explique que l’arbre est passé à la nouvelle version, avec « Fermer l’outil », « Refaire la mise à jour » et « Fermer ce message ».
+
+### Changements
+- **Vérifications remaniées** : santé de l’arbre en premier, « Mes recherches à faire » repliées juste en dessous, « Petites victoires » avec 3 corrections en un clic, tuiles colorées par catégorie avec barre de progression, félicitations quand une catégorie est terminée, sources internationales en premier.
+- **Exporter repensé comme Importer** : on choisit d’abord le type (une vue de l’outil, documents et rapports, sauvegarder les données, partager), puis les options. Les vues suivent l’ordre des onglets. Planche contact, rapport des lieux et rapport de vérification toujours disponibles.
+- **Zoom à la molette plus fluide** sur l’arbre (crans regroupés par image), et **Carte plus rapide à s’ouvrir** (la liste des personnes est calculée au premier usage).
+- **Visite guidée entièrement refaite pour les débutants** : en-tête, chaque onglet, l’arbre, la fiche, l’enregistrement et l’aide, en 33 étapes courtes.
+- **Nouvel écran d’accueil** : logo Arbora en tête et un bouton lumineux « Découvrir l’outil en 2 minutes ».
+- Les animations en boucle au-dessus de l’arbre ont été arrêtées.
+- **Planche contact** : nom complet sous chaque image, sur deux lignes si besoin.
+- **Mettre à jour en gardant mon arbre** : le nom proposé suit le format d’enregistrement (Arbora_nom de l’arbre_JJ-MM-AAAA_HH-MM.html), et la fenêtre explique que le navigateur ne peut pas fermer l’ancienne version ni ouvrir la nouvelle tout seul.
+- **Consignes IA** : résidences avec année de début et de fin, sources citées de façon générique pour tous les pays.
+- Titre de l’onglet du navigateur : « Arbora | nom de l’arbre ».
+
+### Corrections
+- Le rappel « modifications gardées seulement dans ce navigateur » disparaît dès que le fichier est enregistré.
+- Les vérifications ne proposent plus de « correction » identique à la valeur actuelle.
 
 ## [1.4.0] - 2026-11-15
 

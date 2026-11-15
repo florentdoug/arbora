@@ -57,6 +57,15 @@ Your tree lives inside the file: save it, back it up, send it to your family. Ar
 - **Open.** GEDCOM and JSON import and export, six languages, light and dark themes. Your tree is never locked in.
 - **Durable.** No subscription, no installation. The file will still open in twenty years.
 
+## New in 1.5.0
+
+- **Smoother wheel zoom** and faster Map.
+- **Guided tour redone for beginners** and a new welcome screen.
+- **Checks redesigned** with « Quick wins » and progress per category.
+- **Residences with start and end years**, sorted in one click.
+- **AI**: research the history of a surname, with deep research advice.
+- **Export redesigned**, gallery preview, guided switch after an update.
+
 ## New in 1.4.0
 
 - **One person's journey on the map**, with numbered steps.
@@ -196,6 +205,15 @@ Ton arbre vit dans le fichier : enregistre-le, sauvegarde-le, envoie-le à ta fa
 - **Complet.** Arbre, fiche, sablier, éventail, frise, carte, galerie, statistiques, vérifications, livre de famille en PDF.
 - **Ouvert.** Import et export GEDCOM et JSON, six langues, thème clair et sombre. Ton arbre n’est jamais enfermé.
 - **Durable.** Pas d’abonnement, pas d’installation. Le fichier s’ouvrira encore dans vingt ans.
+
+## Nouveau en 1.5.0
+
+- **Zoom à la molette plus fluide** et Carte plus rapide.
+- **Visite guidée refaite pour les débutants** et nouvel écran d’accueil.
+- **Vérifications remaniées** avec des « Petites victoires » et la progression par catégorie.
+- **Résidences avec année de début et de fin**, triées en un clic.
+- **IA** : recherche sur l’histoire d’un nom de famille, avec conseil de recherche approfondie.
+- **Exporter repensé**, aperçu dans la galerie, passage guidé après une mise à jour.
 
 ## Nouveau en 1.4.0
 
